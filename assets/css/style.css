@@ -3,7 +3,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
 }
 
 html, body {
@@ -18,21 +17,21 @@ body {
     display: flex;
     background-color: #1a1a1a;
     position: relative;
-    overflow: hidden;
 }
 
 /* Logo Styles */
 .logo {
-    width: 180px;
-    height: 180px;
+    width: 160px;
+    height: 160px;
     background-color: #ff6b00;
     position: relative;
-    margin-bottom: 3rem;
+    margin-bottom: 2.7rem;
     overflow: hidden;
+    padding: 0 1.8rem;
 }
 
 .logo h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 900;
     line-height: 1;
     color: #000;
@@ -50,7 +49,7 @@ body {
     position: absolute;
     bottom: -10px;
     right: -10px;
-    font-size: 5rem;
+    font-size: 4.5rem;
     font-weight: 900;
     color: rgba(0, 0, 0, 0.15);
     line-height: 0.8;
@@ -58,11 +57,11 @@ body {
 
 /* Sidebar Styles */
 .sidebar {
-    width: 250px;
+    width: 225px;
     height: 100vh;
     background-color: #000;
     color: #fff;
-    padding: 2rem;
+    padding: 1.8rem 0;
     position: fixed;
     left: 0;
     top: 0;
@@ -75,18 +74,21 @@ body {
 
 .nav-links {
     list-style: none;
+    padding-left: 1.8rem;
 }
 
 .nav-links li {
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 .nav-links a {
     color: #fff;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 500;
     transition: color 0.3s ease;
+    display: block;
+    letter-spacing: 0.05em;
 }
 
 .nav-links a:hover,
@@ -94,41 +96,32 @@ body {
     color: #ff6b00;
 }
 
+.nav-links a.active {
+    font-weight: 700;
+}
+
 .copyright {
     font-size: 0.8rem;
     opacity: 0.7;
     line-height: 1.4;
+    padding: 0 1.8rem;
 }
 
 /* Main Content Styles */
 .main-content {
-    margin-left: 250px;
-    display: flex;
-    flex-direction: row;
-    width: fit-content;
-    height: 100vh;
-    overflow-x: auto;
-    overflow-y: hidden;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-}
-
-/* Section Styles */
-section {
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
-    height: 100vh;
-    flex-shrink: 0;
+    margin-left: 225px;
+    width: calc(100% - 225px);
+    min-height: 100vh;
+    background-color: #fff;
 }
 
 /* Hero Section */
 .hero {
-    width: 60vw;
+    height: 100vh;
     display: flex;
     align-items: center;
     padding: 0 4rem;
     background-color: #1a1a1a;
-    position: relative;
 }
 
 .hero-content h1 {
@@ -138,23 +131,10 @@ section {
     margin-bottom: 2rem;
 }
 
-.scroll-indicator {
-    position: absolute;
-    bottom: 2rem;
-    left: 4rem;
-    color: #fff;
-    font-size: 0.9rem;
-    transform: rotate(-90deg);
-    transform-origin: left;
-}
-
 /* About Section */
 .about {
-    width: calc(100vw - 70vw);
-    min-width: 600px;
     padding: 4rem;
     background-color: #fff;
-    overflow-y: auto;
 }
 
 .about h2 {
@@ -214,20 +194,14 @@ section {
 
 /* Responsive Design */
 @media (max-width: 1024px) {
-    .hero {
-        width: 60vw;
-    }
-    
-    .about {
-        width: calc(100vw - 60vw);
-        min-width: 500px;
+    .hero-content h1 {
+        font-size: 3.5rem;
     }
 }
 
 @media (max-width: 768px) {
     body {
-        overflow-y: auto;
-        overflow-x: hidden;
+        flex-direction: column;
     }
 
     .sidebar {
@@ -237,34 +211,11 @@ section {
         padding: 1rem;
     }
 
-    .main-content {
-        margin-left: 0;
-        width: 100%;
-        flex-direction: column;
-        overflow-y: auto;
-        overflow-x: hidden;
-    }
-
-    section {
-        width: 100% !important;
-        min-width: unset !important;
-        scroll-snap-align: start;
-        height: auto;
-    }
-
-    .hero {
-        min-height: 60vh;
-        padding: 2rem;
-    }
-
-    .scroll-indicator {
-        transform: none;
-    }
-
     .logo {
         width: 120px;
         height: 120px;
         margin: 1rem auto;
+        padding: 0;
     }
 
     .logo h2 {
@@ -272,14 +223,33 @@ section {
     }
 
     .nav-links {
+        padding-left: 0;
         display: flex;
         flex-wrap: wrap;
         gap: 1rem;
         margin-bottom: 1rem;
+        justify-content: center;
     }
 
     .nav-links li {
         margin-bottom: 0;
+    }
+
+    .copyright {
+        padding: 0;
+        text-align: center;
+    }
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .hero {
+        padding: 2rem;
+        height: auto;
+        min-height: 60vh;
+        text-align: center;
     }
 
     .hero-content h1 {
