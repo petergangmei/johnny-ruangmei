@@ -60,14 +60,20 @@
             </div>
         </nav>
 
-        <!-- Hero Section -->
-        <div class="bg-primary text-white text-center p-5">
-            <div class="container py-5">
-                <h1 class="display-4 fw-bold mb-4">Johnny Ruangmei</h1>
-                <p class="lead mb-4">Diplomat | Political Visionary | Entrepreneur | Spiritual Mystic</p>
-                <div class="d-flex justify-content-center">
-                    <a href="#about" class="btn btn-light btn-lg shadow-0 me-2">Learn More</a>
-                    <a href="#contact" class="btn btn-outline-light btn-lg">Get in Touch</a>
+        <!-- Hero Section - Redesigned with diagonal element -->
+        <div class="hero-section position-relative overflow-hidden">
+            <div class="diagonal-overlay"></div>
+            <div class="container py-5 position-relative">
+                <div class="row align-items-center min-vh-75">
+                    <div class="col-lg-7 text-white">
+                        <h6 class="fw-light mb-3">Diplomat | Visionary | Leader</h6>
+                        <h1 class="display-2 fw-bold mb-4">Johnny<br>Ruangmei</h1>
+                        <p class="lead mb-4">Justice and fairness for everyone</p>
+                        <div class="d-flex">
+                            <a href="#about" class="btn btn-light btn-lg shadow-0 me-2">Learn More</a>
+                            <a href="#contact" class="btn btn-outline-light btn-lg">Get in Touch</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -78,8 +84,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center mb-5">
-                    <h2 class="fw-bold position-relative d-inline-block">About Johnny Ruangmei</h2>
-                    <div class="heading-underline"></div>
+                    <h2 class="section-title">Mission</h2>
+                    <div class="title-underline mx-auto"></div>
                 </div>
             </div>
             <div class="row align-items-center">
@@ -89,15 +95,15 @@
                         width="300" height="300" loading="lazy">
                 </div>
                 <div class="col-lg-8">
-                    <p class="lead">Johnny Ruangmei is a distinguished diplomat, visionary political leader, successful entrepreneur, and profound spiritual mystic.</p>
+                    <p class="text-center mb-4">Johnny Ruangmei is a distinguished diplomat, visionary political leader, successful entrepreneur, and profound spiritual mystic. With over a decade of diplomatic experience, Johnny has represented his nation on international platforms, fostering cross-cultural relationships and negotiating pivotal agreements that have shaped regional policy.</p>
                     
-                    <p>With over a decade of diplomatic experience, Johnny has represented his nation on international platforms, fostering cross-cultural relationships and negotiating pivotal agreements that have shaped regional policy.</p>
+                    <p class="text-center">As a political visionary, his innovative approach to governance and policy development has earned him recognition among peers and constituents alike. His entrepreneurial ventures have created numerous job opportunities and contributed significantly to economic development.</p>
                     
-                    <p>As a political visionary, his innovative approach to governance and policy development has earned him recognition among peers and constituents alike. His entrepreneurial ventures have created numerous job opportunities and contributed significantly to economic development.</p>
+                    <div class="text-center mb-4">
+                        <img src="assets/images/signature.png" alt="Johnny Ruangmei's Signature" class="img-fluid" width="200">
+                    </div>
                     
-                    <p>Beyond his professional accomplishments, Johnny is known for his spiritual depth and wisdom, often integrating philosophical principles into his leadership style and decision-making processes.</p>
-                    
-                    <div class="mt-4">
+                    <div class="text-center mt-4">
                         <a href="#achievements" class="btn btn-primary">View Achievements</a>
                     </div>
                 </div>
@@ -110,211 +116,43 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center mb-5">
-                    <h2 class="fw-bold position-relative d-inline-block">Achievements</h2>
-                    <div class="heading-underline"></div>
-                    <p class="lead">Diplomatic & Entrepreneurial Milestones</p>
+                    <h2 class="section-title">Initiatives</h2>
+                    <div class="title-underline mx-auto"></div>
                 </div>
             </div>
             
-            <!-- Diplomatic Achievements -->
-            <div class="row mb-5">
-                <div class="col-12 mb-4">
-                    <h3 class="text-primary">Diplomatic Achievements</h3>
-                </div>
-                
-                <!-- Achievement Cards -->
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="card h-100 border-0 achievement-card">
-                        <!-- Added icon container for visual enhancement -->
-                        <div class="icon-container bg-primary">
-                            <i class="fas fa-globe-americas fa-2x text-white"></i>
+            <!-- New simplified card layout for key initiatives -->
+            <div class="row justify-content-center">
+                <div class="col-md-4 mb-5">
+                    <div class="achievement-card h-100">
+                        <div class="simplified-icon">
+                            <i class="far fa-handshake"></i>
                         </div>
-                        <div class="card-body pt-5">
-                            <h5 class="card-title fw-bold">International Relations</h5>
-                            <p class="card-text">Established diplomatic relations with 15+ countries, creating pathways for cultural and economic exchange.</p>
-                        </div>
-                        <div class="card-footer bg-transparent border-0">
-                            <small class="text-muted"><i class="far fa-calendar-alt me-1"></i>2015 - Present</small>
-                        </div>
+                        <h3 class="card-title">Diplomacy</h3>
+                        <p>Establishing peaceful relations and fostering international cooperation for global challenges.</p>
+                        <a href="#achievements" class="read-more">Learn More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="card h-100 border-0 achievement-card">
-                        <div class="icon-container bg-success">
-                            <i class="fas fa-handshake fa-2x text-white"></i>
+                <div class="col-md-4 mb-5">
+                    <div class="achievement-card h-100">
+                        <div class="simplified-icon">
+                            <i class="fas fa-seedling"></i>
                         </div>
-                        <div class="card-body pt-5">
-                            <h5 class="card-title fw-bold">Peace Negotiations</h5>
-                            <p class="card-text">Led critical peace talks resulting in the historic Regional Peace Accord, ending decades of regional conflict.</p>
-                        </div>
-                        <div class="card-footer bg-transparent border-0">
-                            <small class="text-muted"><i class="far fa-calendar-alt me-1"></i>2018</small>
-                        </div>
+                        <h3 class="card-title">Development</h3>
+                        <p>Creating sustainable economic and social development opportunities for communities.</p>
+                        <a href="#vision" class="read-more">Learn More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="card h-100 border-0 achievement-card">
-                        <div class="icon-container bg-info">
-                            <i class="fas fa-building fa-2x text-white"></i>
+                <div class="col-md-4 mb-5">
+                    <div class="achievement-card h-100">
+                        <div class="simplified-icon">
+                            <i class="fas fa-users"></i>
                         </div>
-                        <div class="card-body pt-5">
-                            <h5 class="card-title fw-bold">UN Representation</h5>
-                            <p class="card-text">Represented his nation at United Nations forums addressing global sustainability and climate change initiatives.</p>
-                        </div>
-                        <div class="card-footer bg-transparent border-0">
-                            <small class="text-muted"><i class="far fa-calendar-alt me-1"></i>2019 - 2022</small>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- New Diplomatic Achievement -->
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="card h-100 border-0 achievement-card">
-                        <div class="icon-container bg-warning">
-                            <i class="fas fa-award fa-2x text-white"></i>
-                        </div>
-                        <div class="card-body pt-5">
-                            <h5 class="card-title fw-bold">Humanitarian Award</h5>
-                            <p class="card-text">Received the International Humanitarian Award for leading efforts to address refugee crises and provide humanitarian aid.</p>
-                        </div>
-                        <div class="card-footer bg-transparent border-0">
-                            <small class="text-muted"><i class="far fa-calendar-alt me-1"></i>2023</small>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- New Diplomatic Achievement -->
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="card h-100 border-0 achievement-card">
-                        <div class="icon-container bg-danger">
-                            <i class="fas fa-university fa-2x text-white"></i>
-                        </div>
-                        <div class="card-body pt-5">
-                            <h5 class="card-title fw-bold">Cross-Border Collaboration</h5>
-                            <p class="card-text">Established a landmark cross-border education exchange program involving universities from 8 countries.</p>
-                        </div>
-                        <div class="card-footer bg-transparent border-0">
-                            <small class="text-muted"><i class="far fa-calendar-alt me-1"></i>2024</small>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- New Diplomatic Achievement -->
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="card h-100 border-0 achievement-card">
-                        <div class="icon-container bg-secondary">
-                            <i class="fas fa-gavel fa-2x text-white"></i>
-                        </div>
-                        <div class="card-body pt-5">
-                            <h5 class="card-title fw-bold">International Policy Reform</h5>
-                            <p class="card-text">Spearheaded a coalition of nations to reform international trade policies, creating more equitable economic opportunities.</p>
-                        </div>
-                        <div class="card-footer bg-transparent border-0">
-                            <small class="text-muted"><i class="far fa-calendar-alt me-1"></i>2026</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Entrepreneurial Achievements -->
-            <div class="row">
-                <div class="col-12 mb-4">
-                    <h3 class="text-primary">Entrepreneurial Ventures</h3>
-                </div>
-                
-                <!-- Achievement Cards -->
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="card h-100 border-0 achievement-card">
-                        <div class="icon-container bg-success">
-                            <i class="fas fa-solar-panel fa-2x text-white"></i>
-                        </div>
-                        <div class="card-body pt-5">
-                            <h5 class="card-title fw-bold">GreenTech Solutions</h5>
-                            <p class="card-text">Founded a renewable energy startup that pioneered affordable solar solutions for rural communities, impacting over 50,000 households.</p>
-                        </div>
-                        <div class="card-footer bg-transparent border-0">
-                            <small class="text-muted"><i class="far fa-calendar-alt me-1"></i>2012</small>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="card h-100 border-0 achievement-card">
-                        <div class="icon-container bg-primary">
-                            <i class="fas fa-hands-helping fa-2x text-white"></i>
-                        </div>
-                        <div class="card-body pt-5">
-                            <h5 class="card-title fw-bold">Rural Development Initiative</h5>
-                            <p class="card-text">Established a social enterprise that has empowered over 5,000 farmers through microfinance and sustainable agriculture training.</p>
-                        </div>
-                        <div class="card-footer bg-transparent border-0">
-                            <small class="text-muted"><i class="far fa-calendar-alt me-1"></i>2014</small>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="card h-100 border-0 achievement-card">
-                        <div class="icon-container bg-info">
-                            <i class="fas fa-graduation-cap fa-2x text-white"></i>
-                        </div>
-                        <div class="card-body pt-5">
-                            <h5 class="card-title fw-bold">EducateAll Platform</h5>
-                            <p class="card-text">Co-founded a digital learning platform providing free education to underprivileged children, reaching over 100,000 students worldwide.</p>
-                        </div>
-                        <div class="card-footer bg-transparent border-0">
-                            <small class="text-muted"><i class="far fa-calendar-alt me-1"></i>2017</small>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- New Entrepreneurial Achievement -->
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="card h-100 border-0 achievement-card">
-                        <div class="icon-container bg-warning">
-                            <i class="fas fa-heartbeat fa-2x text-white"></i>
-                        </div>
-                        <div class="card-body pt-5">
-                            <h5 class="card-title fw-bold">HealthConnect</h5>
-                            <p class="card-text">Launched a telemedicine startup connecting rural communities with specialist healthcare services, serving over 30 remote regions.</p>
-                        </div>
-                        <div class="card-footer bg-transparent border-0">
-                            <small class="text-muted"><i class="far fa-calendar-alt me-1"></i>2021</small>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- New Entrepreneurial Achievement - Limtra Travel Company -->
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="card h-100 border-0 achievement-card highlight-card">
-                        <div class="icon-container bg-danger">
-                            <i class="fas fa-plane fa-2x text-white"></i>
-                        </div>
-                        <div class="card-body pt-5">
-                            <h5 class="card-title fw-bold">Limtra Travel Company</h5>
-                            <p class="card-text">Founded an innovative sustainable tourism company promoting cultural exchange and eco-friendly travel experiences across continents.</p>
-                        </div>
-                        <div class="card-footer bg-transparent border-0">
-                            <small class="text-muted"><i class="far fa-calendar-alt me-1"></i>2029</small>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- New Entrepreneurial Achievement -->
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="card h-100 border-0 achievement-card">
-                        <div class="icon-container bg-dark">
-                            <i class="fas fa-robot fa-2x text-white"></i>
-                        </div>
-                        <div class="card-body pt-5">
-                            <h5 class="card-title fw-bold">AI for Humanity</h5>
-                            <p class="card-text">Established a research foundation developing AI solutions for humanitarian challenges, with projects implemented in 12 countries.</p>
-                        </div>
-                        <div class="card-footer bg-transparent border-0">
-                            <small class="text-muted"><i class="far fa-calendar-alt me-1"></i>2025</small>
-                        </div>
+                        <h3 class="card-title">Leadership</h3>
+                        <p>Guiding with integrity and compassion to create positive change in society.</p>
+                        <a href="#contact" class="read-more">Get Involved <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -326,8 +164,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center mb-5">
-                    <h2 class="fw-bold position-relative d-inline-block">Vision</h2>
-                    <div class="heading-underline"></div>
+                    <h2 class="section-title">Vision</h2>
+                    <div class="title-underline mx-auto"></div>
                     <p class="lead">Political & Spiritual Perspective</p>
                 </div>
             </div>
@@ -433,8 +271,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center mb-5">
-                    <h2 class="fw-bold position-relative d-inline-block">Contact</h2>
-                    <div class="heading-underline"></div>
+                    <h2 class="section-title">Contact</h2>
+                    <div class="title-underline mx-auto"></div>
                     <p class="lead">Get in Touch with Johnny Ruangmei</p>
                 </div>
             </div>
@@ -530,6 +368,48 @@
     <!-- Custom JS -->
     <script src="assets/js/main.js"></script>
     <style>
+        /* Hero section with diagonal overlay */
+        .hero-section {
+            background-color: #1a3665;
+            background-image: url('assets/images/hero-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+        }
+        
+        .diagonal-overlay {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 35%;
+            background-color: #a52a2a;
+            clip-path: polygon(100% 0, 0 0, 100% 100%);
+            z-index: 1;
+        }
+        
+        .min-vh-75 {
+            min-height: 75vh;
+        }
+        
+        /* Updated section titles */
+        .section-title {
+            font-weight: 600;
+            position: relative;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+        
+        .title-underline {
+            height: 3px;
+            width: 40px;
+            background-color: #a52a2a;
+            margin: 0.5rem auto 2rem;
+        }
+        
         /* Custom styles for headings */
         .heading-underline {
             height: 4px;
@@ -537,6 +417,7 @@
             background: linear-gradient(to right, var(--mdb-primary), var(--mdb-info));
             margin: 0.5rem auto 1.5rem;
             border-radius: 2px;
+            display: none;
         }
         
         h2.fw-bold.position-relative:after {
@@ -562,7 +443,7 @@
             background: linear-gradient(135deg, var(--mdb-info), var(--mdb-info-dark)) !important;
         }
         
-        /* Enhanced card styles */
+        /* Enhanced card styles inspired by the screenshot */
         .achievement-card {
             transition: all 0.3s ease;
             border-radius: 0.5rem !important;
@@ -570,11 +451,33 @@
             overflow: hidden;
             position: relative;
             border: 1px solid rgba(0, 0, 0, 0.05) !important;
+            text-align: center;
+            padding: 2rem 1rem;
+            background-color: white;
         }
         
         .achievement-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+        }
+        
+        .simplified-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .simplified-icon i {
+            font-size: 2.5rem;
+            color: #a52a2a;
+        }
+        
+        .simplified-icon img {
+            max-width: 100%;
+            height: auto;
         }
         
         .icon-container {
@@ -601,10 +504,36 @@
             font-weight: 600;
             color: #333;
             transition: color 0.3s ease;
+            margin-bottom: 1rem;
         }
         
-        .achievement-card:hover .card-body h5 {
-            color: var(--mdb-primary);
+        .card-title {
+            font-weight: 600;
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        
+        .achievement-card:hover .card-body h5,
+        .achievement-card:hover .card-title {
+            color: #a52a2a;
+        }
+        
+        .read-more {
+            display: inline-block;
+            margin-top: 1rem;
+            color: #a52a2a;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .read-more i {
+            margin-left: 0.25rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .achievement-card:hover .read-more i {
+            transform: translateX(3px);
         }
         
         .blockquote {
