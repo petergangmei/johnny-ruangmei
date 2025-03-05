@@ -126,13 +126,44 @@ body {
     align-items: center;
     padding: 0 4rem;
     background-color: #1a1a1a;
+    position: relative;
+    overflow: hidden;
 }
 
-.hero-content h1 {
+.hero-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+}
+
+.hero-text {
+    flex: 1;
+    max-width: 600px;
+}
+
+.hero-text h1 {
     font-size: 4rem;
     color: #fff;
     line-height: 1.2;
     margin-bottom: 2rem;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-image {
+    max-width: 90%;
+    height: auto;
+    max-height: 75vh;
+    object-fit: contain;
+    mix-blend-mode: luminosity;
+    opacity: 0.95;
 }
 
 /* About Section */
@@ -253,11 +284,21 @@ body {
         padding: 2rem;
         height: auto;
         min-height: 60vh;
-        text-align: center;
     }
 
-    .hero-content h1 {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .hero-text h1 {
         font-size: 2.5rem;
+    }
+
+    .profile-image {
+        max-height: 50vh;
+        opacity: 0.9;
     }
 
     .about {
