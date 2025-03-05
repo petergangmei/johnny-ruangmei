@@ -21,38 +21,39 @@ body {
 
 /* Logo Styles */
 .logo {
-    width: 160px;
-    height: 160px;
+    /* width: 225px; */
+    height: 225px;
     background-color: #ff6b00;
     position: relative;
-    margin-bottom: 2.7rem;
-    overflow: hidden;
-    padding: 0 1.8rem;
+    margin: 1.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1rem;
 }
 
 .logo h2 {
-    font-size: 1.8rem;
+    font-size: 1.69rem;
     font-weight: 900;
-    line-height: 1;
+    line-height: 1.1;
     color: #000;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     text-align: left;
-    width: 80%;
+    position: relative;
+    z-index: 2;
+    text-transform: uppercase;
     letter-spacing: -0.02em;
 }
 
 .logo::after {
     content: 'R';
     position: absolute;
-    bottom: -10px;
+    bottom: -20px;
     right: -10px;
-    font-size: 4.5rem;
+    font-size: 8rem;
     font-weight: 900;
     color: rgba(0, 0, 0, 0.15);
-    line-height: 0.8;
+    line-height: 1;
+    z-index: 1;
 }
 
 /* Sidebar Styles */
@@ -61,7 +62,7 @@ body {
     height: 100vh;
     background-color: #000;
     color: #fff;
-    padding: 1.8rem 0;
+    padding: 0;
     position: fixed;
     left: 0;
     top: 0;
@@ -219,7 +220,7 @@ body {
     }
 
     .logo h2 {
-        font-size: 1.4rem;
+        font-size: 0.95rem;
     }
 
     .nav-links {
