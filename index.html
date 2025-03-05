@@ -33,10 +33,12 @@
 <body>
     <!-- Header Section -->
     <header id="header-section">
-        <!-- Navigation -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <!-- Navigation - Redesigned -->
+        <nav class="navbar navbar-expand-lg sticky-top custom-navbar">
             <div class="container">
-                <a class="navbar-brand fw-bold" href="#">Johnny Ruangmei</a>
+                <a class="navbar-brand fw-bold" href="#">
+                    <span class="brand-first-name">Johnny</span> <span class="brand-last-name">Ruangmei</span>
+                </a>
                 <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fas fa-bars"></i>
@@ -44,16 +46,19 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" href="#about">About</a>
+                            <a class="nav-link" href="#about">ABOUT</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#achievements">Achievements</a>
+                            <a class="nav-link" href="#achievements">INITIATIVES</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#vision">Vision</a>
+                            <a class="nav-link" href="#vision">VISION</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#contact">Contact</a>
+                            <a class="nav-link" href="#contact">CONTACT</a>
+                        </li>
+                        <li class="nav-item ms-lg-3">
+                            <a class="btn btn-donate" href="#contact">DONATE</a>
                         </li>
                     </ul>
                 </div>
@@ -368,6 +373,85 @@
     <!-- Custom JS -->
     <script src="assets/js/main.js"></script>
     <style>
+        /* Navbar styling */
+        .custom-navbar {
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 15px 0;
+        }
+        
+        .navbar-brand {
+            font-size: 1.4rem;
+            color: #333;
+            letter-spacing: -0.5px;
+        }
+        
+        .brand-first-name {
+            font-weight: 400;
+            color: #333;
+        }
+        
+        .brand-last-name {
+            font-weight: 700;
+            color: #a52a2a;
+        }
+        
+        .navbar-nav .nav-link {
+            color: #333;
+            font-size: 0.85rem;
+            font-weight: 600;
+            padding: 0.75rem 1rem;
+            letter-spacing: 0.5px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .navbar-nav .nav-link:hover {
+            color: #a52a2a;
+        }
+        
+        .navbar-nav .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: #a52a2a;
+            bottom: 0.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: width 0.3s ease;
+        }
+        
+        .navbar-nav .nav-link:hover::after {
+            width: 30px;
+        }
+        
+        .navbar-nav .nav-link.active {
+            color: #a52a2a;
+        }
+        
+        .navbar-nav .nav-link.active::after {
+            width: 30px;
+        }
+        
+        .btn-donate {
+            background-color: #a52a2a;
+            color: white;
+            font-weight: 600;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.25rem;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-donate:hover {
+            background-color: #8b2323;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(165, 42, 42, 0.2);
+        }
+        
         /* Hero section with diagonal overlay */
         .hero-section {
             background-color: #1a3665;
