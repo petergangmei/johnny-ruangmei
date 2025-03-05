@@ -3,6 +3,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
 }
 
 body {
@@ -11,6 +17,8 @@ body {
     color: #333;
     display: flex;
     background-color: #1a1a1a;
+    position: relative;
+    overflow: hidden;
 }
 
 /* Logo Styles */
@@ -57,9 +65,12 @@ body {
     padding: 2rem;
     position: fixed;
     left: 0;
+    top: 0;
+    bottom: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    z-index: 1000;
 }
 
 .nav-links {
@@ -92,13 +103,27 @@ body {
 /* Main Content Styles */
 .main-content {
     margin-left: 250px;
-    width: calc(100% - 250px);
-    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    height: 100vh;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Section Styles */
+section {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    height: 100vh;
+    flex-shrink: 0;
 }
 
 /* Hero Section */
 .hero {
-    height: 100vh;
+    width: 60vw;
     display: flex;
     align-items: center;
     padding: 0 4rem;
@@ -119,12 +144,17 @@ body {
     left: 4rem;
     color: #fff;
     font-size: 0.9rem;
+    transform: rotate(-90deg);
+    transform-origin: left;
 }
 
 /* About Section */
 .about {
+    width: calc(100vw - 70vw);
+    min-width: 600px;
     padding: 4rem;
     background-color: #fff;
+    overflow-y: auto;
 }
 
 .about h2 {
@@ -184,14 +214,20 @@ body {
 
 /* Responsive Design */
 @media (max-width: 1024px) {
-    .hero-content h1 {
-        font-size: 3rem;
+    .hero {
+        width: 60vw;
+    }
+    
+    .about {
+        width: calc(100vw - 60vw);
+        min-width: 500px;
     }
 }
 
 @media (max-width: 768px) {
     body {
-        flex-direction: column;
+        overflow-y: auto;
+        overflow-x: hidden;
     }
 
     .sidebar {
@@ -199,6 +235,30 @@ body {
         height: auto;
         position: relative;
         padding: 1rem;
+    }
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+        flex-direction: column;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    section {
+        width: 100% !important;
+        min-width: unset !important;
+        scroll-snap-align: start;
+        height: auto;
+    }
+
+    .hero {
+        min-height: 60vh;
+        padding: 2rem;
+    }
+
+    .scroll-indicator {
+        transform: none;
     }
 
     .logo {
@@ -222,27 +282,12 @@ body {
         margin-bottom: 0;
     }
 
-    .main-content {
-        margin-left: 0;
-        width: 100%;
-    }
-
-    .hero {
-        padding: 2rem;
-        height: auto;
-        min-height: 60vh;
-    }
-
     .hero-content h1 {
         font-size: 2.5rem;
     }
 
     .about {
         padding: 2rem;
-    }
-
-    .scroll-indicator {
-        left: 2rem;
     }
 }
 
