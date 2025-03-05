@@ -73,13 +73,18 @@
             <div class="diagonal-overlay"></div>
             <div class="container py-5 position-relative">
                 <div class="row align-items-center min-vh-75">
-                    <div class="col-lg-7 text-white">
+                    <div class="col-lg-6 text-white">
                         <h6 class="fw-light mb-3">Diplomat | Visionary | Leader</h6>
                         <h1 class="display-2 fw-bold mb-4">Johnny<br>Ruangmei</h1>
                         <p class="lead mb-4">Justice and fairness for everyone</p>
                         <div class="d-flex">
                             <a href="#about" class="btn btn-light btn-lg shadow-0 me-2">Learn More</a>
                             <a href="#contact" class="btn btn-outline-light btn-lg">Get in Touch</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 position-relative">
+                        <div class="hero-image-container">
+                            <img src="assets/images/johnny.png" alt="Johnny Ruangmei" class="hero-image" />
                         </div>
                     </div>
                 </div>
@@ -540,6 +545,7 @@
             min-height: 70vh;
             display: flex;
             align-items: center;
+            overflow: hidden;
         }
         
         .diagonal-overlay {
@@ -551,6 +557,45 @@
             background-color: #a52a2a;
             clip-path: polygon(100% 0, 0 0, 100% 100%);
             z-index: 1;
+        }
+        
+        .hero-image-container {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-image {
+            width: 80%;
+            height: auto;
+            max-height: 600px;
+            object-fit: contain;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            animation: floatAnimation 6s ease-in-out infinite;
+        }
+
+        @keyframes floatAnimation {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        @media (max-width: 991.98px) {
+            .hero-image {
+                width: 60%;
+                margin-top: 2rem;
+            }
         }
         
         .min-vh-75 {
