@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta tags for SEO -->
+    <meta name="description" content="Official website of Johnny Ruangmei, a diplomat, political visionary, entrepreneur, and spiritual mystic.">
+    <meta name="keywords" content="Johnny Ruangmei, diplomat, political leader, entrepreneur, visionary, spiritual mystic">
+    <title>Johnny Ruangmei | Diplomat | Political Visionary | Entrepreneur | Spiritual Mystic</title>
+    
+    <!-- MDBootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    
+    <!-- Schema.org for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Johnny Ruangmei",
+      "description": "Diplomat, Political Visionary, Entrepreneur, and Spiritual Mystic",
+      "url": "https://johnyruangmei.com",
+      "sameAs": [
+        "https://twitter.com/johnyruangmei",
+        "https://linkedin.com/in/johnyruangmei"
+      ]
+    }
+    </script>
+</head>
+<body>
+    <!-- Header Section -->
+    <div id="header-section"></div>
+    
+    <!-- About Section -->
+    <div id="about-section"></div>
+    
+    <!-- Achievements Section -->
+    <div id="achievements-section"></div>
+    
+    <!-- Vision Section -->
+    <div id="vision-section"></div>
+    
+    <!-- Contact Section -->
+    <div id="contact-section"></div>
+    
+    <!-- Footer Section -->
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+            <p>&copy; 2023 Johnny Ruangmei. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- MDBootstrap JS -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Load sections
+        $(document).ready(function() {
+            $("#header-section").load("sections/header.html");
+            $("#about-section").load("sections/about.html");
+            $("#achievements-section").load("sections/achievements.html");
+            $("#vision-section").load("sections/vision.html");
+            $("#contact-section").load("sections/contact.html");
+        });
+    </script>
+</body>
+</html> 
