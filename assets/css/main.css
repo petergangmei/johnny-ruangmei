@@ -139,4 +139,51 @@ blockquote {
 footer {
     background-color: #343A40;
     padding: 30px 0;
+}
+
+/* Achievement Cards Styling */
+.achievement-card {
+    border-radius: 10px;
+    overflow: visible;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    position: relative;
+    padding-top: 30px;
+}
+
+.achievement-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+/* Icon container styling */
+.icon-container {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -25px;
+    left: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Special highlight for Limtra card */
+.highlight-card {
+    border-left: 4px solid #dc3545;
+}
+
+/* Card title enhancement */
+.achievement-card .card-title {
+    margin-bottom: 15px;
+    border-bottom: 2px solid #f8f9fa;
+    padding-bottom: 10px;
+}
+
+/* Footer styling */
+.achievement-card .card-footer small {
+    font-weight: 500;
 } 
