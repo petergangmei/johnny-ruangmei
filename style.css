@@ -126,6 +126,10 @@ body {
     align-items: center;
     padding: 0 4rem;
     background-color: #1a1a1a;
+    background-image: url('assets/images/johny_transperent.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right center;
     position: relative;
     overflow: hidden;
 }
