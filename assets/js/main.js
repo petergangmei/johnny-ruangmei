@@ -13,15 +13,21 @@ document.addEventListener('DOMContentLoaded', function() {
         // Add each word with animation delay
         words.forEach((word, index) => {
             const span = document.createElement('span');
-            span.textContent = word + ' ';
+            span.textContent = word + ' '; // Space after each word
             span.style.display = 'inline-block';
             span.style.opacity = '0';
             span.style.animation = `fadeInBlur 0.6s ease forwards ${1 + (index * 0.1)}s`;
+            
+            // Add extra margin to create more space between words
+            span.style.marginRight = '0.4em';
+            
             subtitle.appendChild(span);
         });
     }
     
-    // Add hover effect to the name
+    // Remove the previous hover effect that might conflict with CSS
+    // We'll handle everything in CSS to prevent animation restart issues
+    /*
     const name = document.querySelector('.hero-text h1 span:last-child');
     if (name) {
         name.addEventListener('mouseover', function() {
@@ -34,4 +40,5 @@ document.addEventListener('DOMContentLoaded', function() {
             this.style.transition = 'color 0.3s ease';
         });
     }
+    */
 });
