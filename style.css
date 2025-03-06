@@ -226,10 +226,6 @@ body {
     align-items: center;
     padding: 0 4rem;
     background-color: #ede7e7;
-    background-image: url('assets/images/johny_transperent.png');
-    /* background-size: cover; */
-    background-position: bottom right;
-    background-repeat: no-repeat;
     position: relative;
     overflow: hidden;
 }
@@ -343,15 +339,19 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100%;
+    max-width: 50%;
 }
 
 .profile-image {
-    max-width: 90%;
+    max-width: 100%;
     height: auto;
-    max-height: 75vh;
+    max-height: 80vh;
     object-fit: contain;
     mix-blend-mode: luminosity;
     opacity: 0.95;
+    animation: fadeIn 1.5s ease forwards 0.5s;
+    opacity: 0; /* Start invisible for animation */
 }
 
 /* Responsive Design */
@@ -407,7 +407,8 @@ body {
     
     .hero {
         padding: 3rem 2rem;
-        background-size: 100%;
+        min-height: 100vh;
+        height: auto;
     }
     
     .hero-content {
@@ -420,8 +421,14 @@ body {
         font-size: 2.5rem;
     }
     
+    .hero-image {
+        max-width: 100%;
+        margin-top: 2rem;
+    }
+    
     .profile-image {
-        max-height: 50vh;
+        max-height: 60vh;
+        width: auto;
     }
     
     /* Ensure gradient text works on mobile */
