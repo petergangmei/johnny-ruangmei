@@ -27,4 +27,32 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // No need to add a gradient-visible class anymore as
     // the gradient is applied from the start of the animation
+
+    // Mobile Menu Functionality
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+    const sidebar = document.querySelector('.sidebar');
+
+    // Toggle mobile menu
+    mobileMenuBtn.addEventListener('click', function() {
+        this.classList.toggle('active');
+        navLinks.classList.toggle('active');
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(event) {
+        const isClickInsideNav = sidebar.contains(event.target);
+        if (!isClickInsideNav && navLinks.classList.contains('active')) {
+            mobileMenuBtn.classList.remove('active');
+            navLinks.classList.remove('active');
+        }
+    });
+
+    // Close mobile menu when window is resized to desktop view
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 768) {
+            mobileMenuBtn.classList.remove('active');
+            navLinks.classList.remove('active');
+        }
+    });
 });
