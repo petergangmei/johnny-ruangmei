@@ -14,3 +14,11 @@ Thumbs.db
 # Environment variables
 .env
 .env.local 
+
+# Firebase
+.firebase/
+firebase-debug.log
+.firebaserc
+firebase-debug.*.log
+ui-debug.log
+firebase.json
