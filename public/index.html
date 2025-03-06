@@ -39,12 +39,12 @@
         <div class="logo">
             <h2>JOHNNY RUANGMEI</h2>
         </div>
-        <!-- Replace custom bars with Font Awesome icons -->
-        <button class="mobile-menu-toggle">
+        <!-- Mobile menu toggle button -->
+        <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
             <i class="fas fa-bars menu-icon"></i>
             <i class="fas fa-times close-icon"></i>
         </button>
-        <!-- Wrap nav-links in a container -->
+        <!-- Navigation container -->
         <div class="nav-container">
             <ul class="nav-links">
                 <li><a href="/" class="active">HOME</a></li>
@@ -90,9 +90,12 @@
         document.addEventListener('DOMContentLoaded', function() {
             // Mobile menu toggle functionality
             const menuToggle = document.querySelector('.mobile-menu-toggle');
+            const navContainer = document.querySelector('.nav-container');
             
             if (menuToggle) {
-                menuToggle.addEventListener('click', function() {
+                menuToggle.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation(); // Prevent event bubbling
                     // Toggle active class on the button
                     this.classList.toggle('active');
                     // Toggle menu-open class on body
@@ -112,6 +115,27 @@
                     // Remove menu-open class from body
                     document.body.classList.remove('menu-open');
                 });
+            });
+            
+            // Close menu when clicking outside the navigation
+            document.addEventListener('click', function(e) {
+                // If menu is open and click target is not within the nav container or menu toggle
+                if (document.body.classList.contains('menu-open') && 
+                    !navContainer.contains(e.target) && 
+                    !menuToggle.contains(e.target)) {
+                    
+                    // Close the menu
+                    menuToggle.classList.remove('active');
+                    document.body.classList.remove('menu-open');
+                }
+            });
+            
+            // Handle window resize - close menu if screen size changes
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768 && document.body.classList.contains('menu-open')) {
+                    menuToggle.classList.remove('active');
+                    document.body.classList.remove('menu-open');
+                }
             });
         });
     </script>
