@@ -25,13 +25,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Handle the name animation sequence
-    const name = document.querySelector('.hero-text h1 span:last-child');
-    if (name) {
-        // Set a timeout to add the gradient-visible class after the initial animation
-        setTimeout(() => {
-            // Add the class that makes the text transparent so the gradient shows
-            name.classList.add('gradient-visible');
-        }, 1800); // Match the timing with the CSS (1.8s)
-    }
+    // No need to add a gradient-visible class anymore as
+    // the gradient is applied from the start of the animation
 });

@@ -210,6 +210,16 @@ body {
     }
 }
 
+/* Add a new keyframe animation for the color transition */
+@keyframes gradientTransition {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 /* Hero Section */
 .hero {
     height: 100vh;
@@ -266,9 +276,10 @@ body {
     cursor: pointer;
     position: relative;
     z-index: 1;
-    color: #ccc;
+    color: #ccc; /* Start with gray color */
 }
 
+/* Modify the before pseudo-element to have a gradual transition */
 .hero-text h1 span:last-child::before {
     content: attr(data-text);
     position: absolute;
@@ -281,18 +292,17 @@ body {
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-    animation: fadeIn 0.5s ease forwards 1.8s,
-               gradientText 3s linear infinite 2.3s;
+    opacity: 0; /* Start with zero opacity */
+    /* Reduce transition time from 3s to 2s */
+    animation: 
+        letterSpacing 1.2s ease forwards 0.6s, /* Match the same timing as the parent */
+        gradientTransition 2s ease-in-out forwards 0.6s, /* Reduced to 2-second color transition */
+        gradientText 3s linear infinite 2.6s; /* Start the flowing gradient after the transition completes */
 }
 
+/* Add back the hover effect */
 .hero-text h1 span:last-child:hover::before {
     opacity: 1;
-}
-
-.hero-text h1 span:last-child.gradient-visible {
-    color: transparent;
 }
 
 .hero-text h1 span:last-child::after {
@@ -417,8 +427,10 @@ body {
     
     /* Ensure gradient text works on mobile */
     .hero-text h1 span:last-child::before {
-        animation: fadeIn 0.5s ease forwards 1.8s,
-                   gradientText 3s linear infinite 2.3s;
+        animation: 
+            letterSpacing 1.2s ease forwards 0.6s,
+            gradientTransition 2s ease-in-out forwards 0.6s,
+            gradientText 3s linear infinite 2.6s;
     }
 }
 
@@ -435,7 +447,9 @@ body {
     
     /* Adjust animation timing for smaller screens */
     .hero-text h1 span:last-child::before {
-        animation: fadeIn 0.5s ease forwards 1.8s,
-                   gradientText 3s linear infinite 2.3s;
+        animation: 
+            letterSpacing 1.2s ease forwards 0.6s,
+            gradientTransition 2s ease-in-out forwards 0.6s,
+            gradientText 3s linear infinite 2.6s;
     }
 } 
