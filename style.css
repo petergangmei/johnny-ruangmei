@@ -24,8 +24,7 @@ body {
 
 /* Logo Styles */
 .logo {
-    /* width: 225px; */
-    height: 225px;
+    height: 255px;
     background-color: #ff6b00;
     position: relative;
     margin: 1.5rem 1rem;
@@ -50,8 +49,8 @@ body {
 .logo::after {
     content: 'R';
     position: absolute;
-    bottom: -20px;
-    right: -10px;
+    bottom: -10px;
+    right: 40px;
     font-size: 8rem;
     font-weight: 900;
     color: rgba(0, 0, 0, 0.15);
@@ -61,7 +60,7 @@ body {
 
 /* Sidebar Styles */
 .sidebar {
-    width: 225px;
+    width: 210px;
     height: 100vh;
     background-color: #000;
     color: #fff;
@@ -113,8 +112,8 @@ body {
 
 /* Main Content Styles */
 .main-content {
-    margin-left: 225px;
-    width: calc(100% - 225px);
+    margin-left: 210px;
+    width: calc(100% - 210px);
     min-height: 100vh;
     background-color: #fff;
 }
