@@ -199,24 +199,31 @@
 @media (max-width: 768px) {
     .education {
         padding: 3rem 2rem;
+        padding-top: 2rem; /* Adjusted for mobile header */
     }
     
     .education h2 {
         font-size: 3rem;
+        margin-top: 1rem; /* Added space after mobile header */
     }
     
     .institution-logo {
-        flex: 0 0 60px;
+        width: 60px;
         height: 60px;
     }
     
     .institution-logo img {
-        width: 30px;
-        height: 30px;
+        max-width: 70%;
     }
     
     .timeline-content {
-        gap: 1rem;
+        padding: 1.5rem;
+    }
+    
+    /* Ensure content doesn't overlap with mobile nav */
+    body.menu-open .education {
+        position: relative;
+        z-index: 1;
     }
 }
 
