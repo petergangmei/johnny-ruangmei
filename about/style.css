@@ -6,75 +6,75 @@
 /* About Page Section Styles */
 .about {
     padding: 4rem;
-    background-color: #ede7e7;
+    background-color: #3a3a3a; /* Dark gray background */
     min-height: 100vh;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    background-image: url('../assets/images/johny_transperent.png');
+    background-size: 60%;
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-blend-mode: soft-light;
 }
 
 .about h2 {
-    font-size: 2.5rem;
+    font-size: 4.5rem;
     font-weight: 700;
     margin-bottom: 2rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    position: relative;
-    display: inline-block;
+    display: block;
 }
 
 .about h2::after {
     content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-    width: 50px;
-    height: 4px;
+    display: block;
+    width: 100px;
+    height: 5px;
     background-color: #ff6b00;
+    margin-top: 20px;
+    margin-bottom: 50px;
 }
 
 .about-info {
-    margin-bottom: 3rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
+    margin-bottom: 4rem;
+    max-width: 600px;
 }
 
 .info-item {
-    padding: 1rem;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    display: flex;
-    align-items: center;
+    margin-bottom: 1.5rem;
+    display: block;
 }
 
 .info-item label {
-    font-weight: 600;
+    font-weight: 400;
     margin-right: 0.5rem;
-    color: #ff6b00;
-    width: 100px;
+    color: #fff;
 }
 
 .info-item span {
-    color: #333;
+    color: #fff;
+    font-weight: 300;
 }
 
 .professional-profile {
-    background-color: #fff;
-    padding: 2rem;
-    border-radius: 5px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    max-width: 600px;
+    margin-top: 3rem;
 }
 
 .professional-profile h3 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: 600;
-    margin-bottom: 1rem;
-    color: #333;
+    margin-bottom: 1.5rem;
+    color: #fff;
+    text-transform: uppercase;
 }
 
 .professional-profile p {
     line-height: 1.8;
     font-size: 1.1rem;
-    color: #555;
+    color: #ddd;
 }
 
 /* Add more styling for additional about page sections here */
@@ -103,49 +103,42 @@
 /* Responsive styles for About page */
 @media (max-width: 1024px) {
     .about h2 {
-        font-size: 2.2rem;
+        font-size: 3.5rem;
+    }
+    
+    .about {
+        background-size: 80%;
+        background-position: right 50px;
     }
 }
 
 @media (max-width: 768px) {
     .about {
         padding: 3rem 2rem;
+        background-size: 100%;
+        background-position: bottom right;
     }
     
-    .about-info {
-        grid-template-columns: 1fr;
+    .about h2 {
+        font-size: 3rem;
     }
     
-    .info-item {
-        padding: 0.8rem;
-    }
-    
-    .info-item label {
-        width: 80px;
-    }
-    
-    .professional-profile,
-    .bio-section {
-        padding: 1.5rem;
+    .professional-profile {
+        margin-top: 2rem;
     }
 }
 
 @media (max-width: 480px) {
     .about h2 {
-        font-size: 1.8rem;
+        font-size: 2.5rem;
     }
     
-    .about-info {
-        gap: 1rem;
+    .about h2::after {
+        width: 70px;
+        margin-bottom: 30px;
     }
     
     .info-item {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    
-    .info-item label {
-        margin-bottom: 0.3rem;
-        width: auto;
+        margin-bottom: 1rem;
     }
 } 
