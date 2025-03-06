@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const navContainer = document.querySelector('.nav-container');
     const navLinks = document.querySelectorAll('.nav-links a');
 
-    // Toggle menu when hamburger button is clicked
+    // Toggle menu when button is clicked
     menuToggle.addEventListener('click', function() {
         menuToggle.classList.toggle('active');
         navContainer.classList.toggle('active');

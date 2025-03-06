@@ -489,41 +489,44 @@ body {
     border: none;
     cursor: pointer;
     padding: 0;
-    z-index: 1001;
+    z-index: 9999;
     position: absolute;
     right: 1rem;
-    top: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ffffff;
+    font-size: 1.5rem;
 }
 
-.mobile-menu-toggle .bar {
+/* Hide close icon by default */
+.mobile-menu-toggle .close-icon {
+    display: none;
+}
+
+/* Show close icon and hide menu icon when active */
+.mobile-menu-toggle.active {
+    position: fixed;
+    top: 1.5rem;
+    transform: none;
+}
+
+.mobile-menu-toggle.active .close-icon {
     display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    background-color: #ffffff;
-    transition: all 0.3s ease-in-out;
+}
+
+.mobile-menu-toggle.active .menu-icon {
+    display: none;
 }
 
 /* Mobile Navigation Styles */
 @media (max-width: 768px) {
+    .sidebar {
+        position: relative;
+        padding-right: 3.5rem;
+    }
+
     .mobile-menu-toggle {
         display: block;
-    }
-
-    .mobile-menu-toggle.active .bar {
-        background-color: #ffffff;
-    }
-
-    .mobile-menu-toggle.active .bar:nth-child(1) {
-        transform: rotate(-45deg) translate(-5px, 6px);
-    }
-
-    .mobile-menu-toggle.active .bar:nth-child(2) {
-        opacity: 0;
-    }
-
-    .mobile-menu-toggle.active .bar:nth-child(3) {
-        transform: rotate(45deg) translate(-5px, -6px);
     }
 
     .nav-container {
