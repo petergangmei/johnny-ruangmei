@@ -18,23 +18,31 @@
     <!-- Page Specific CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="portfolio-page">
     <!-- Sidebar Navigation -->
     <nav class="sidebar">
         <div class="logo">
             <h2>JOHNNY RUANGMEI</h2>
         </div>
-        <ul class="nav-links">
-            <li><a href="/">HOME</a></li>
-            <li><a href="/about">ABOUT</a></li>
-            <li><a href="/skills">SKILLS</a></li>
-            <li><a href="/experience">EXPERIENCE</a></li>
-            <li><a href="/education">EDUCATION</a></li>
-            <li><a href="/portfolio" class="active">PORTFOLIO</a></li>
-        </ul>
-        <div class="copyright">
-            © JOHNNY RUANGMEI.<br>
-            ALL RIGHTS RESERVED.
+        <!-- Mobile menu toggle button -->
+        <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+            <i class="fas fa-bars menu-icon" aria-hidden="true"></i>
+            <i class="fas fa-times close-icon" aria-hidden="true"></i>
+        </button>
+        <!-- Wrap nav-links in a container -->
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li><a href="/">HOME</a></li>
+                <li><a href="/about">ABOUT</a></li>
+                <li><a href="/skills">SKILLS</a></li>
+                <li><a href="/experience">EXPERIENCE</a></li>
+                <li><a href="/education">EDUCATION</a></li>
+                <li><a href="/portfolio" class="active">PORTFOLIO</a></li>
+            </ul>
+            <div class="copyright">
+                © JOHNNY RUANGMEI.<br>
+                ALL RIGHTS RESERVED.
+            </div>
         </div>
     </nav>
 
@@ -99,5 +107,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- MDBootstrap JS -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.js"></script>
+    <!-- Main Navigation JS -->
+    <script src="../assets/js/main.js"></script>
 </body>
 </html> 

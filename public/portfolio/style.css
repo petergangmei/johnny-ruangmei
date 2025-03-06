@@ -170,15 +170,23 @@
 @media (max-width: 768px) {
     .portfolio {
         padding: 3rem 2rem;
+        padding-top: 2rem; /* Adjusted for mobile header */
     }
     
     .portfolio h2 {
         font-size: 3rem;
+        margin-top: 1rem; /* Added space after mobile header */
     }
     
     .portfolio-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
+    }
+    
+    /* Ensure content doesn't overlap with mobile nav */
+    body.menu-open .portfolio {
+        position: relative;
+        z-index: 1;
     }
 }
 
