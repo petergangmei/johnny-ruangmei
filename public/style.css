@@ -198,20 +198,54 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: none; /* Remove transitions to avoid conflicts with animations */
+    transition: all 0.3s ease;
 }
 
 .mobile-menu-toggle .close-icon {
     opacity: 0;
-    transform: translateY(-300%); /* Start far above */
+    transform: scale(0);
 }
 
 .mobile-menu-toggle.active .menu-icon {
-    animation: slideIconUp 0.5s ease forwards;
+    opacity: 0;
+    transform: scale(0);
 }
 
 .mobile-menu-toggle.active .close-icon {
-    animation: slideIconDown 0.6s ease forwards;
+    opacity: 1;
+    transform: scale(1);
+}
+
+@media (min-width: 769px) {
+    .mobile-menu-toggle {
+        display: none !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .mobile-menu-toggle {
+        display: flex !important;
+    }
+    
+    .nav-container {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #000;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 999;
+        padding: 1rem 0;
+        overflow-y: auto;
+        height: calc(100vh - 60px);
+        display: block;
+    }
+    
+    body.menu-open .nav-container {
+        transform: translateX(0);
+    }
 }
 
 /* Nav Container */
@@ -368,10 +402,10 @@ body {
 
 /* Hero Section */
 .hero {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
-    padding: 0 4rem;
+    padding: 0 1rem;
     background-color: #1a1a1a;
     position: relative;
     overflow: hidden;
@@ -379,17 +413,13 @@ body {
 
 .hero-content {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 4rem;
     position: relative;
-    height: 100%;
-    padding-top: 4rem;
+    min-height: 100%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
 .hero-text {
-    flex: 1;
     max-width: 600px;
     animation: fadeIn 1.2s ease forwards;
     position: relative;
@@ -486,22 +516,25 @@ body {
     opacity: 0;
 }
 
+.hero-image-container {
+    position: relative;
+    height: 100%;
+    z-index: 1;
+}
+
 .hero-image {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    height: 86vh;
-    width: auto;
+    height: auto;
+    max-height: 80vh;
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
     z-index: 1;
-    transform: scale(1.07);
     transform-origin: bottom right;
 }
 
 .profile-image {
-    height: 100%;
+    height: auto;
+    max-height: 80vh;
     width: auto;
     object-fit: contain;
     mix-blend-mode: normal;
@@ -511,7 +544,7 @@ body {
 
 /* Responsive Design */
 @media (max-width: 1024px) {
-    .hero-content h1 {
+    .hero-text h1 {
         font-size: 2.8rem;
     }
 }
@@ -554,10 +587,7 @@ body {
     /* Make sure hero section fills screen properly */
     .hero {
         min-height: calc(100vh - 60px);
-        padding: 1rem 2rem;
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: center;
+        padding: 1rem;
     }
 
     /* Adjust logo size for mobile */
@@ -575,6 +605,28 @@ body {
 
     .logo h2 {
         font-size: 1.2rem;
+    }
+    
+    .mobile-menu-toggle {
+        display: flex; /* Make sure the toggle is visible on mobile */
+    }
+    
+    .nav-container {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #000;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 999;
+        padding: 1rem 0;
+        overflow-y: auto;
+    }
+    
+    body.menu-open .nav-container {
+        transform: translateX(0);
     }
     
     .nav-links {
@@ -607,74 +659,38 @@ body {
         color: #fff;
     }
 
-    /* Hero section content alignment */
-    .hero-content {
-        flex-direction: column;
-        text-align: center;
-        gap: 2rem;
-    }
-    
     .hero-text h1 {
         font-size: 2.5rem;
     }
     
     .hero-image {
         height: auto;
+        max-height: 60vh;
         width: 100%;
         display: flex;
         justify-content: center;
+        transform: none;
     }
     
     .profile-image {
-        height: 60vh;
-        max-height: 450px;
-    }
-    
-    /* Ensure gradient text works on mobile */
-    .hero-text h1 span:last-child::before {
-        animation: 
-            letterSpacing 1.2s ease forwards 0.6s,
-            gradientTransition 2s ease-in-out forwards 0.6s,
-            gradientText 3s linear infinite 2.6s;
-    }
-    
-    /* Body class for when menu is open */
-    body.menu-open {
-        overflow: hidden;
-    }
-    
-    body.menu-open .main-content {
-        position: relative;
-        z-index: 1;
+        height: auto;
+        max-height: 60vh;
+        max-width: 100%;
     }
 }
 
-@media (max-width: 480px) {
-    .hero-content h1 {
+/* Additional mobile optimization */
+@media (max-width: 576px) {
+    .hero-text h1 {
         font-size: 2rem;
-        word-spacing: 0.2em;
     }
     
     .hero-text h4 {
-        word-spacing: 0.3em;
-        letter-spacing: 0.03em;
+        font-size: 1rem;
     }
     
-    /* Adjust animation timing for smaller screens */
-    .hero-text h1 span:last-child::before {
-        animation: 
-            letterSpacing 1.2s ease forwards 0.6s,
-            gradientTransition 2s ease-in-out forwards 0.6s,
-            gradientText 3s linear infinite 2.6s;
-    }
-    
-    .hero-content {
-        padding-bottom: calc(75vh - 4rem);
-    }
-    
-    .hero-image {
-        height: 65vh;
-        /* transform: translateX(50%) scale(1.07); */
+    .profile-image {
+        max-height: 50vh;
     }
 }
 
@@ -768,4 +784,106 @@ body {
 /* Add a global rule to handle background color consistency */
 html {
     background-color: #1a1a1a;
+}
+
+/* Responsive tweaks for medium-sized devices */
+@media (min-width: 769px) and (max-width: 991px) {
+    /* Adjust main content margin */
+    .main-content {
+        margin-left: 210px;
+        width: calc(100% - 210px);
+    }
+    
+    /* Adjust hero section for tablet */
+    .hero {
+        padding: 0 2rem;
+    }
+    
+    .hero-content {
+        gap: 2rem;
+    }
+    
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-text h4 {
+        font-size: 1rem;
+    }
+    
+    .hero-image {
+        max-height: 70vh;
+    }
+    
+    .profile-image {
+        max-height: 70vh;
+    }
+}
+
+/* Extra small device adjustments */
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 1.8rem;
+    }
+    
+    .hero-text h4 {
+        font-size: 0.9rem;
+    }
+    
+    .profile-image {
+        max-height: 45vh;
+    }
+    
+    .hero {
+        padding: 0.5rem;
+    }
+}
+
+/* Make sure images are responsive on all devices */
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Specific MDB Bootstrap overrides for better integration */
+.container-fluid {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* Fix for row inside hero content */
+.hero .row {
+    width: 100%;
+    margin: 0;
+}
+
+/* Fix spacing issues on various device sizes */
+@media (min-width: 992px) {
+    .hero-text {
+        padding-left: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-text, .hero-image-container {
+        padding: 1rem;
+    }
+    
+    .hero .row {
+        flex-direction: column-reverse;
+    }
+    
+    .hero-image-container {
+        height: auto;
+        margin-bottom: 1rem;
+    }
+    
+    /* Center mobile navigation */
+    .nav-links {
+        padding: 2rem 1rem;
+        text-align: center;
+    }
 } 

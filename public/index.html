@@ -64,14 +64,16 @@
     <!-- Main Content -->
     <main class="main-content">
         <!-- Hero Section -->
-        <section class="hero">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1><span>HELLO, I'M</span><br><span data-text="JOHNNY RUANGMEI">JOHNNY RUANGMEI</span></h1>
-                    <h4>Diplomat, Political Visionary, Entrepreneur, and Spiritual Mystic</h4>
+        <section class="hero container-fluid">
+            <div class="row h-100 align-items-center hero-content">
+                <div class="col-lg-6 hero-text mb-4 mb-lg-0">
+                    <h1 class="text-lg-start text-center"><span>HELLO, I'M</span><br><span data-text="JOHNNY RUANGMEI">JOHNNY RUANGMEI</span></h1>
+                    <h4 class="text-lg-start text-center">Diplomat, Political Visionary, Entrepreneur, and Spiritual Mystic</h4>
                 </div>
-                <div class="hero-image">
-                    <img src="assets/images/johny_transperent.png" alt="Johnny Ruangmei" class="profile-image">
+                <div class="col-lg-6 d-flex justify-content-center justify-content-lg-end hero-image-container">
+                    <div class="hero-image">
+                        <img src="assets/images/johny_transperent.png" alt="Johnny Ruangmei" class="profile-image img-fluid">
+                    </div>
                 </div>
             </div>
         </section>
@@ -81,8 +83,38 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- MDBootstrap JS -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.js"></script>
-    <!-- Custom JS -->
-    <script src="assets/js/main.js"></script>
+    
+    <!-- Custom JS for mobile menu toggle -->
+    <script>
+        // Wait for the DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu toggle functionality
+            const menuToggle = document.querySelector('.mobile-menu-toggle');
+            
+            if (menuToggle) {
+                menuToggle.addEventListener('click', function() {
+                    // Toggle active class on the button
+                    this.classList.toggle('active');
+                    // Toggle menu-open class on body
+                    document.body.classList.toggle('menu-open');
+                });
+            }
+            
+            // Close menu when clicking on a link
+            const navLinks = document.querySelectorAll('.nav-links a');
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    // Remove active class from menu toggle
+                    if (menuToggle) {
+                        menuToggle.classList.remove('active');
+                    }
+                    // Remove menu-open class from body
+                    document.body.classList.remove('menu-open');
+                });
+            });
+        });
+    </script>
     
 </body>
 </html> 
