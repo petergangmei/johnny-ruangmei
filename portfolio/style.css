@@ -1,0 +1,156 @@
+/* 
+* Portfolio Page Specific Styles
+* For Johnny Ruangmei Portfolio
+*/
+
+/* Portfolio Page Section Styles */
+.portfolio {
+    padding: 4rem;
+    background-color: #3a3a3a; /* Dark gray background */
+    min-height: 100vh;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio h2 {
+    font-size: 4.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: block;
+}
+
+.portfolio h2::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 5px;
+    background-color: #ff6b00;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.portfolio h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #ccc;
+}
+
+.portfolio-description {
+    max-width: 800px;
+    margin-bottom: 3rem;
+}
+
+.portfolio-description p {
+    line-height: 1.8;
+    font-size: 1.1rem;
+    color: #bbb;
+}
+
+/* Portfolio Grid */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+}
+
+.portfolio-item {
+    position: relative;
+    background-color: #2a2a2a;
+    border-radius: 5px;
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.portfolio-item h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+.portfolio-item .category {
+    color: #ff6b00;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.view-project {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #ff6b00;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+    margin-top: auto;
+}
+
+.view-project:hover {
+    background-color: #e05f00;
+}
+
+/* Responsive styles for Portfolio page */
+@media (max-width: 1024px) {
+    .portfolio h2 {
+        font-size: 3.5rem;
+    }
+    
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .portfolio {
+        padding: 3rem 2rem;
+    }
+    
+    .portfolio h2 {
+        font-size: 3rem;
+    }
+    
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio h2 {
+        font-size: 2.5rem;
+    }
+    
+    .portfolio h2::after {
+        width: 70px;
+        margin-bottom: 20px;
+    }
+    
+    .portfolio h3 {
+        font-size: 1.5rem;
+    }
+    
+    .portfolio-item {
+        padding: 1.5rem;
+    }
+    
+    .portfolio-item h4 {
+        font-size: 1.3rem;
+    }
+} 
