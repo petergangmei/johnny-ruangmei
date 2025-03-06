@@ -343,12 +343,14 @@ body {
     position: absolute;
     right: 0;
     bottom: 0;
-    height: 80vh;
+    height: 86vh;
     width: auto;
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
     z-index: 1;
+    transform: scale(1.07);
+    transform-origin: bottom right;
 }
 
 .profile-image {
@@ -422,7 +424,7 @@ body {
         text-align: center;
         gap: 2rem;
         padding-top: 2rem;
-        padding-bottom: calc(80vh - 4rem);
+        padding-bottom: calc(86vh - 4rem);
     }
     
     .hero-text h1 {
@@ -430,12 +432,12 @@ body {
     }
     
     .hero-image {
-        height: 70vh;
+        height: 75vh;
         width: 100%;
         position: absolute;
         bottom: 0;
         right: 50%;
-        transform: translateX(50%);
+        transform: translateX(50%) scale(1.07);
     }
     
     .profile-image {
@@ -471,10 +473,11 @@ body {
     }
     
     .hero-content {
-        padding-bottom: calc(70vh - 4rem);
+        padding-bottom: calc(75vh - 4rem);
     }
     
     .hero-image {
-        height: 60vh;
+        height: 65vh;
+        transform: translateX(50%) scale(1.07);
     }
 } 
