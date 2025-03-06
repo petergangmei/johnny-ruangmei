@@ -1,0 +1,193 @@
+/* 
+* Education Page Specific Styles
+* For Johnny Ruangmei Portfolio
+*/
+
+/* Education Page Section Styles */
+.education {
+    padding: 4rem;
+    background-color: #3a3a3a; /* Dark gray background */
+    min-height: 100vh;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.education h2 {
+    font-size: 4.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: block;
+}
+
+.education h2::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 5px;
+    background-color: #ff6b00;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.education h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #ccc;
+}
+
+.education-description {
+    max-width: 800px;
+    margin-bottom: 4rem;
+}
+
+.education-description p {
+    line-height: 1.8;
+    font-size: 1.1rem;
+    color: #bbb;
+}
+
+/* Timeline and Education Items */
+.education-timeline {
+    max-width: 1000px;
+}
+
+.timeline-item {
+    margin-bottom: 3rem;
+    position: relative;
+    padding-bottom: 2rem;
+}
+
+.timeline-divider {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.1);
+    margin: 2rem 0;
+}
+
+.timeline-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.institution-logo {
+    flex: 0 0 80px;
+    height: 80px;
+    background-color: #ff6b00;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+}
+
+.institution-logo img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
+
+.education-details {
+    min-width: 250px;
+}
+
+.institution-name {
+    display: block;
+    font-size: 1rem;
+    color: #aaa;
+    margin-bottom: 0.3rem;
+}
+
+.degree {
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+.years {
+    display: block;
+    font-size: 1rem;
+    color: #888;
+}
+
+.timeline-item .education-description {
+    max-width: 500px;
+    margin-bottom: 0;
+    flex: 1;
+}
+
+.timeline-item .education-description p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #aaa;
+}
+
+/* Responsive styles for Education page */
+@media (max-width: 1024px) {
+    .education h2 {
+        font-size: 3.5rem;
+    }
+    
+    .timeline-content {
+        flex-wrap: wrap;
+    }
+    
+    .education-details {
+        min-width: auto;
+        margin-bottom: 1rem;
+    }
+    
+    .degree {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .education {
+        padding: 3rem 2rem;
+    }
+    
+    .education h2 {
+        font-size: 3rem;
+    }
+    
+    .institution-logo {
+        flex: 0 0 60px;
+        height: 60px;
+    }
+    
+    .institution-logo img {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .timeline-content {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .education h2 {
+        font-size: 2.5rem;
+    }
+    
+    .education h2::after {
+        width: 70px;
+        margin-bottom: 20px;
+    }
+    
+    .education h3 {
+        font-size: 1.5rem;
+    }
+    
+    .degree {
+        font-size: 1.5rem;
+    }
+} 
