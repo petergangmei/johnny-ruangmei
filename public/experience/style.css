@@ -199,10 +199,12 @@
 @media (max-width: 768px) {
     .experience {
         padding: 3rem 2rem;
+        padding-top: 2rem; /* Adjusted for mobile header */
     }
     
     .experience h2 {
         font-size: 3rem;
+        margin-top: 1rem; /* Added space after mobile header */
     }
     
     .company-logo {
@@ -217,6 +219,12 @@
     
     .timeline-content {
         gap: 1rem;
+    }
+    
+    /* Ensure content doesn't overlap with mobile nav */
+    body.menu-open .experience {
+        position: relative;
+        z-index: 1;
     }
 }
 
