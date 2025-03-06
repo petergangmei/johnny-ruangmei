@@ -3,6 +3,38 @@
 * For Johnny Ruangmei Portfolio
 */
 
+/* Animation Keyframes */
+@keyframes slideInRight {
+    0% {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInUp {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 /* About Page Section Styles */
 .about {
     padding: 4rem;
@@ -21,6 +53,8 @@
     text-transform: uppercase;
     letter-spacing: 0.05em;
     display: block;
+    opacity: 0;
+    animation: slideInRight 1s ease forwards;
 }
 
 .about h2::after {
@@ -31,17 +65,31 @@
     background-color: #ff6b00;
     margin-top: 20px;
     margin-bottom: 50px;
+    opacity: 0;
+    animation: slideInRight 1s ease forwards 0.3s;
 }
 
 .about-info {
     margin-bottom: 4rem;
     max-width: 600px;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards 0.5s;
 }
 
 .info-item {
     margin-bottom: 1.5rem;
     display: block;
+    opacity: 0;
+    animation: slideInUp 0.5s ease forwards;
+    animation-delay: calc(0.2s * var(--item-index, 1));
 }
+
+.info-item:nth-child(1) { --item-index: 1; }
+.info-item:nth-child(2) { --item-index: 2; }
+.info-item:nth-child(3) { --item-index: 3; }
+.info-item:nth-child(4) { --item-index: 4; }
+.info-item:nth-child(5) { --item-index: 5; }
+.info-item:nth-child(6) { --item-index: 6; }
 
 .info-item label {
     font-weight: 400;
@@ -57,6 +105,8 @@
 .professional-profile {
     max-width: 600px;
     margin-top: 3rem;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards 1.2s;
 }
 
 .professional-profile h3 {
