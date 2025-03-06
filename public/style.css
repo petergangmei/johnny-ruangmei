@@ -674,7 +674,7 @@ body {
     
     .hero-image {
         height: 65vh;
-        transform: translateX(50%) scale(1.07);
+        /* transform: translateX(50%) scale(1.07); */
     }
 }
 
