@@ -47,7 +47,7 @@
 .experience-description p {
     line-height: 1.8;
     font-size: 1.1rem;
-    color: #bbb;
+    color: #ccc;
 }
 
 /* Timeline and Experience Items */
@@ -99,7 +99,7 @@
 .company-name {
     display: block;
     font-size: 1rem;
-    color: #aaa;
+    color: #ccc;
     margin-bottom: 0.3rem;
 }
 
@@ -113,7 +113,7 @@
 .years {
     display: block;
     font-size: 1rem;
-    color: #888;
+    color: #ccc;
 }
 
 .timeline-item .experience-description {
@@ -126,7 +126,7 @@
     margin: 0;
     font-size: 1rem;
     line-height: 1.6;
-    color: #aaa;
+    color: #ccc;
 }
 
 /* Responsive styles for Experience page */

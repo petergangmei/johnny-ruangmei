@@ -46,11 +46,11 @@
 .info-item label {
     font-weight: 400;
     margin-right: 0.5rem;
-    color: #fff;
+    color: #ccc;
 }
 
 .info-item span {
-    color: #fff;
+    color: #ccc;
     font-weight: 300;
 }
 
@@ -63,14 +63,14 @@
     font-size: 1.8rem;
     font-weight: 600;
     margin-bottom: 1.5rem;
-    color: #fff;
+    color: #ccc;
     text-transform: uppercase;
 }
 
 .professional-profile p {
     line-height: 1.8;
     font-size: 1.1rem;
-    color: #ddd;
+    color: #ccc;
 }
 
 /* Add more styling for additional about page sections here */
