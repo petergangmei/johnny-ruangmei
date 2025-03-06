@@ -156,18 +156,30 @@
 @media (max-width: 768px) {
     .about {
         padding: 3rem 2rem;
+        padding-top: 2rem; /* Adjusted for mobile header */
     }
     
     .about h2 {
         font-size: 3rem;
+        margin-top: 1rem; /* Added space after mobile header */
     }
     
     .professional-profile {
         margin-top: 2rem;
     }
+
+    /* Ensure content doesn't overlap with mobile nav */
+    body.menu-open .about {
+        position: relative;
+        z-index: 1;
+    }
 }
 
 @media (max-width: 480px) {
+    .about {
+        padding: 2rem 1.5rem;
+    }
+
     .about h2 {
         font-size: 2.5rem;
     }
@@ -179,5 +191,13 @@
     
     .info-item {
         margin-bottom: 1rem;
+    }
+
+    .professional-profile h3 {
+        font-size: 1.5rem;
+    }
+
+    .professional-profile p {
+        font-size: 1rem;
     }
 } 
