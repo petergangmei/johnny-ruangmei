@@ -956,7 +956,7 @@ html {
     background-color: #1a1a1a;
 }
 
-/* Responsive tweaks for medium-sized devices */
+/* Medium screen improvements - tablets and smaller desktops */
 @media (min-width: 769px) and (max-width: 991px) {
     /* Adjust main content margin */
     .main-content {
@@ -971,42 +971,116 @@ html {
     
     .hero-content {
         gap: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .hero-text {
+        max-width: 660px;
+        margin: 0 auto;
+        text-align: center;
     }
     
     .hero-text h1 {
-        font-size: 2.5rem;
+        font-size: 3.5rem;
+        text-align: center;
     }
     
     .hero-text h4 {
         font-size: 1rem;
+        text-align: center;
     }
     
     .hero-image {
         max-height: 70vh;
+        margin: 0 auto;
     }
     
     .profile-image {
         max-height: 70vh;
+        display: block;
+        margin: 0 auto;
     }
 }
 
-/* Extra small device adjustments */
-@media (max-width: 480px) {
-    .hero-text h1 {
-        font-size: 2.3rem;
+/* Fix for tablets in portrait mode */
+@media (min-width: 576px) and (max-width: 768px) {
+    .hero-content {
+        flex-direction: column-reverse;
+        align-items: center;
     }
     
-    .hero-text h4 {
-        font-size: 0.9rem;
+    .hero-image-container {
+        margin-bottom: 2rem;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .hero-image {
+        height: auto;
+        max-height: 55vh;
+        display: flex;
+        justify-content: center;
+        width: 100%;
     }
     
     .profile-image {
-        max-height: 45vh;
+        max-height: 55vh;
+        margin: 0 auto;
     }
     
-    .hero {
-        padding: 0.5rem;
+    .hero-text {
+        max-width: 100%;
+        text-align: center;
+        padding: 0 1rem;
     }
+    
+    .hero-text h1 {
+        text-align: center;
+    }
+    
+    .hero-text h4 {
+        text-align: center;
+    }
+}
+
+/* Ensure Bootstrap rows respect our alignment */
+.row {
+    width: 100%;
+    margin: 0;
+}
+
+/* Make sure Bootstrap column alignment works properly */
+.col-lg-6 {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Hero image alignment fixes */
+.hero-image-container {
+    display: flex;
+    justify-content: center;
+}
+
+@media (min-width: 992px) {
+    .hero-image-container {
+        justify-content: flex-end;
+    }
+}
+
+/* Fix image sizing and alignment */
+.hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-image {
+    max-width: 100%;
+    height: auto;
 }
 
 /* Make sure images are responsive on all devices */
@@ -1055,5 +1129,97 @@ html {
     .nav-links {
         padding: 2rem 1rem;
         text-align: center;
+    }
+}
+
+/* Fix for overlapping media queries and ensure image is centered on all screen sizes */
+@media (max-width: 991px) {
+    /* Center image and text on medium and small screens */
+    .hero-content {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem 1rem;
+        height: auto !important; /* Override the h-100 class */
+        min-height: 80vh;
+    }
+    
+    .hero-text {
+        margin-top: 2rem;
+        text-align: center;
+        max-width: 100%;
+        padding: 0 1rem;
+    }
+    
+    /* Ensure text is centered on these screen sizes */
+    .hero-text h1, 
+    .hero-text h4 {
+        text-align: center !important;
+    }
+    
+    /* Make sure the image is centered and sized properly */
+    .hero-image-container {
+        width: 100%;
+        display: flex;
+        justify-content: center !important;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+    
+    .hero-image {
+        max-width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        transform: none !important;
+    }
+    
+    .profile-image {
+        max-height: 60vh;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    
+    /* Override any bootstrap classes that might interfere */
+    .justify-content-lg-end,
+    .text-lg-start {
+        justify-content: center !important;
+        text-align: center !important;
+    }
+}
+
+/* Specific mobile adjustments */
+@media (max-width: 576px) {
+    .profile-image {
+        max-height: 50vh;
+    }
+    
+    .hero-text h1 {
+        font-size: 2.6rem;
+    }
+    
+    .hero-text h4 {
+        font-size: 1rem;
+    }
+}
+
+/* Extra small screen adjustments */
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 2.3rem;
+    }
+    
+    .hero-text h4 {
+        font-size: 0.9rem;
+    }
+    
+    .profile-image {
+        max-height: 45vh;
+    }
+    
+    .hero {
+        padding: 0.5rem;
     }
 } 
