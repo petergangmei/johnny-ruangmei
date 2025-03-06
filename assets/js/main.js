@@ -28,31 +28,24 @@ document.addEventListener('DOMContentLoaded', function() {
     // No need to add a gradient-visible class anymore as
     // the gradient is applied from the start of the animation
 
-    // Mobile Menu Functionality
-    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-    const navLinks = document.querySelector('.nav-links');
-    const sidebar = document.querySelector('.sidebar');
+    // Mobile Menu Toggle
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    const navContainer = document.querySelector('.nav-container');
+    const navLinks = document.querySelectorAll('.nav-links a');
 
-    // Toggle mobile menu
-    mobileMenuBtn.addEventListener('click', function() {
-        this.classList.toggle('active');
-        navLinks.classList.toggle('active');
+    // Toggle menu when hamburger button is clicked
+    menuToggle.addEventListener('click', function() {
+        menuToggle.classList.toggle('active');
+        navContainer.classList.toggle('active');
+        document.body.classList.toggle('menu-open');
     });
 
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', function(event) {
-        const isClickInsideNav = sidebar.contains(event.target);
-        if (!isClickInsideNav && navLinks.classList.contains('active')) {
-            mobileMenuBtn.classList.remove('active');
-            navLinks.classList.remove('active');
-        }
-    });
-
-    // Close mobile menu when window is resized to desktop view
-    window.addEventListener('resize', function() {
-        if (window.innerWidth > 768) {
-            mobileMenuBtn.classList.remove('active');
-            navLinks.classList.remove('active');
-        }
+    // Close menu when a nav link is clicked
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            menuToggle.classList.remove('active');
+            navContainer.classList.remove('active');
+            document.body.classList.remove('menu-open');
+        });
     });
 });

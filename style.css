@@ -376,19 +376,16 @@ body {
     
     .sidebar {
         width: 100%;
-        height: 70px; /* Fixed height for mobile header */
-        position: fixed;
+        height: auto;
+        position: relative;
         flex-direction: row;
         align-items: center;
-        padding: 0;
-        transition: all 0.3s ease;
     }
     
     .logo {
         height: auto;
         width: 150px;
-        margin: 0.5rem 1rem;
-        background-color: transparent;
+        margin: 1rem;
     }
     
     .logo h2 {
@@ -396,35 +393,15 @@ body {
     }
     
     .nav-links {
-        position: fixed;
-        top: 70px; /* Match sidebar height */
-        left: -100%;
-        width: 100%;
-        height: calc(100vh - 70px);
-        background-color: #000;
-        flex-direction: column;
-        padding: 2rem;
-        transition: left 0.3s ease;
         display: flex;
-        align-items: center;
-        justify-content: flex-start;
-    }
-    
-    .nav-links.active {
-        left: 0;
+        padding: 0 1rem;
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
     }
     
     .nav-links li {
-        margin: 1.5rem 0;
-        text-align: center;
-        width: 100%;
-    }
-    
-    .nav-links a {
-        font-size: 1.2rem;
-        padding: 0.5rem 0;
-        display: block;
-        width: 100%;
+        margin-bottom: 0.5rem;
     }
     
     .copyright {
@@ -434,11 +411,6 @@ body {
     .main-content {
         margin-left: 0;
         width: 100%;
-        margin-top: 70px; /* Match sidebar height */
-    }
-    
-    .mobile-menu-btn {
-        display: block;
     }
     
     .hero {
@@ -510,37 +482,86 @@ body {
     }
 }
 
-/* Mobile Menu Button */
-.mobile-menu-btn {
+/* Mobile Menu Toggle Button */
+.mobile-menu-toggle {
     display: none;
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1001;
     background: none;
     border: none;
     cursor: pointer;
-    padding: 10px;
+    padding: 0;
+    z-index: 1001;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
 }
 
-.mobile-menu-btn span {
+.mobile-menu-toggle .bar {
     display: block;
     width: 25px;
-    height: 2px;
-    margin: 5px 0;
-    background-color: #fff;
-    transition: all 0.3s ease;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #ffffff;
+    transition: all 0.3s ease-in-out;
 }
 
-/* Mobile menu button animation */
-.mobile-menu-btn.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-}
+/* Mobile Navigation Styles */
+@media (max-width: 768px) {
+    .mobile-menu-toggle {
+        display: block;
+    }
 
-.mobile-menu-btn.active span:nth-child(2) {
-    opacity: 0;
-}
+    .mobile-menu-toggle.active .bar {
+        background-color: #ffffff;
+    }
 
-.mobile-menu-btn.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -7px);
+    .mobile-menu-toggle.active .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .mobile-menu-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .mobile-menu-toggle.active .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    .nav-container {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        background-color: #000;
+        padding-top: 80px;
+        transition: left 0.3s ease-in-out;
+        z-index: 1000;
+    }
+
+    .nav-container.active {
+        left: 0;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    .nav-links li {
+        margin: 1.5rem 0;
+        text-align: center;
+    }
+
+    .nav-links a {
+        font-size: 1.2rem;
+    }
+
+    .copyright {
+        text-align: center;
+        position: absolute;
+        bottom: 2rem;
+        width: 100%;
+        left: 0;
+    }
 } 
