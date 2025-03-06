@@ -266,7 +266,7 @@ body {
     cursor: pointer;
     position: relative;
     z-index: 1;
-    color: #ccc; /* Explicitly set the color */
+    color: #ccc;
 }
 
 .hero-text h1 span:last-child::before {
@@ -283,14 +283,15 @@ body {
     color: transparent;
     opacity: 0;
     transition: opacity 0.5s ease;
+    animation: fadeIn 0.5s ease forwards 1.8s,
+               gradientText 3s linear infinite 2.3s;
 }
 
 .hero-text h1 span:last-child:hover::before {
     opacity: 1;
 }
 
-/* Remove the other hover effects that were causing problems */
-.hero-text h1 span:last-child:hover {
+.hero-text h1 span:last-child.gradient-visible {
     color: transparent;
 }
 
@@ -413,6 +414,12 @@ body {
     .profile-image {
         max-height: 50vh;
     }
+    
+    /* Ensure gradient text works on mobile */
+    .hero-text h1 span:last-child::before {
+        animation: fadeIn 0.5s ease forwards 1.8s,
+                   gradientText 3s linear infinite 2.3s;
+    }
 }
 
 @media (max-width: 480px) {
@@ -424,5 +431,11 @@ body {
     .hero-text h4 {
         word-spacing: 0.3em;
         letter-spacing: 0.03em;
+    }
+    
+    /* Adjust animation timing for smaller screens */
+    .hero-text h1 span:last-child::before {
+        animation: fadeIn 0.5s ease forwards 1.8s,
+                   gradientText 3s linear infinite 2.3s;
     }
 } 

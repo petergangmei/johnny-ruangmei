@@ -25,20 +25,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Remove the previous hover effect that might conflict with CSS
-    // We'll handle everything in CSS to prevent animation restart issues
-    /*
+    // Handle the name animation sequence
     const name = document.querySelector('.hero-text h1 span:last-child');
     if (name) {
-        name.addEventListener('mouseover', function() {
-            this.style.color = '#ff6b00';
-            this.style.transition = 'color 0.3s ease';
-        });
-        
-        name.addEventListener('mouseout', function() {
-            this.style.color = '#ccc';
-            this.style.transition = 'color 0.3s ease';
-        });
+        // Set a timeout to add the gradient-visible class after the initial animation
+        setTimeout(() => {
+            // Add the class that makes the text transparent so the gradient shows
+            name.classList.add('gradient-visible');
+        }, 1800); // Match the timing with the CSS (1.8s)
     }
-    */
 });
