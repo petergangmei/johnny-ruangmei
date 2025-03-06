@@ -178,11 +178,11 @@
 
 @media (max-width: 768px) {
     .skills {
-        padding: 3rem 2rem;
+        padding-top: 2rem; /* Adjusted for mobile header */
     }
-    
+
     .skills h2 {
-        font-size: 3rem;
+        margin-top: 1rem; /* Added space after mobile header */
     }
     
     .skills-grid {
