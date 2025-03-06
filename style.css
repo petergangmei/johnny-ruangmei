@@ -225,7 +225,7 @@ body {
     display: flex;
     align-items: center;
     padding: 0 4rem;
-    background-color: #ede7e7;
+    background-color: #1a1a1a;
     position: relative;
     overflow: hidden;
 }
@@ -234,14 +234,19 @@ body {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     gap: 4rem;
+    position: relative;
+    height: 100%;
+    padding-top: 4rem;
 }
 
 .hero-text {
     flex: 1;
     max-width: 600px;
     animation: fadeIn 1.2s ease forwards;
+    position: relative;
+    z-index: 2;
 }
 
 .hero-text h1 {
@@ -335,23 +340,24 @@ body {
 }
 
 .hero-image {
-    flex: 1;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 80vh;
+    width: auto;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    max-width: 50%;
+    align-items: flex-end;
+    justify-content: flex-end;
+    z-index: 1;
 }
 
 .profile-image {
-    max-width: 100%;
-    height: auto;
-    max-height: 80vh;
+    height: 100%;
+    width: auto;
     object-fit: contain;
-    mix-blend-mode: luminosity;
-    opacity: 0.95;
+    mix-blend-mode: normal;
     animation: fadeIn 1.5s ease forwards 0.5s;
-    opacity: 0; /* Start invisible for animation */
+    opacity: 0;
 }
 
 /* Responsive Design */
@@ -415,6 +421,8 @@ body {
         flex-direction: column;
         text-align: center;
         gap: 2rem;
+        padding-top: 2rem;
+        padding-bottom: calc(80vh - 4rem);
     }
     
     .hero-text h1 {
@@ -422,13 +430,16 @@ body {
     }
     
     .hero-image {
-        max-width: 100%;
-        margin-top: 2rem;
+        height: 70vh;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        right: 50%;
+        transform: translateX(50%);
     }
     
     .profile-image {
-        max-height: 60vh;
-        width: auto;
+        height: 60vh;
     }
     
     /* Ensure gradient text works on mobile */
@@ -457,5 +468,13 @@ body {
             letterSpacing 1.2s ease forwards 0.6s,
             gradientTransition 2s ease-in-out forwards 0.6s,
             gradientText 3s linear infinite 2.6s;
+    }
+    
+    .hero-content {
+        padding-bottom: calc(70vh - 4rem);
+    }
+    
+    .hero-image {
+        height: 60vh;
     }
 } 
