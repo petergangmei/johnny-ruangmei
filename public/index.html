@@ -93,6 +93,14 @@
                     </div>
                 </div>
             </div>
+            
+            <!-- Scroll Down Button -->
+            <div class="scroll-down-container">
+                <a href="#about" class="scroll-down-btn">
+                    <span>Next Page</span>
+                    <i class="fas fa-chevron-down bounce"></i>
+                </a>
+            </div>
         </section>
     </main>
     
@@ -101,7 +109,7 @@
     <!-- MDBootstrap JS -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.js"></script>
     
-    <!-- Custom JS for mobile menu toggle -->
+    <!-- Custom JS for mobile menu toggle and scroll animation -->
     <script>
         // Wait for the DOM to be fully loaded
         document.addEventListener('DOMContentLoaded', function() {
@@ -154,6 +162,22 @@
                     document.body.classList.remove('menu-open');
                 }
             });
+            
+            // Scroll down button animation
+            const scrollDownBtn = document.querySelector('.scroll-down-btn');
+            if (scrollDownBtn) {
+                scrollDownBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Redirect to about page with a smooth fade effect
+                    document.body.style.opacity = '0';
+                    document.body.style.transition = 'opacity 0.5s ease';
+                    
+                    setTimeout(() => {
+                        window.location.href = "/about";
+                    }, 500);
+                });
+            }
         });
     </script>
     

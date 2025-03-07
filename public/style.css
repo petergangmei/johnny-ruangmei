@@ -22,6 +22,7 @@ body {
     position: relative;
     min-height: 100vh; /* Ensure full height */
     margin: 0; /* Remove any default margins */
+    transition: opacity 0.5s ease;
 }
 
 /* Logo Styles */
@@ -569,20 +570,23 @@ body {
 /* Hero Section */
 .hero {
     min-height: 100vh;
+    padding: 4rem 2rem;
+    padding-bottom: 2rem;
     display: flex;
-    align-items: center;
-    padding: 0 1rem;
+    flex-direction: column;
+    justify-content: space-between;
     background-color: #1a1a1a;
     position: relative;
     overflow: hidden;
 }
 
 .hero-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
-    position: relative;
-    min-height: 100%;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    flex-grow: 1;
 }
 
 .hero-text {
@@ -1362,5 +1366,74 @@ html {
 
     .description {
         font-size: 0.9rem;
+    }
+}
+
+/* Scroll Down Button Styles */
+.scroll-down-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    z-index: 10;
+}
+
+.scroll-down-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ff6b00;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 30px;
+    padding: 10px 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.scroll-down-btn:hover {
+    color: #fff;
+    background-color: #ff6b00;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(255, 107, 0, 0.3);
+}
+
+.scroll-down-btn span {
+    margin-bottom: 5px;
+}
+
+.scroll-down-btn .bounce {
+    animation: bounce 2s infinite;
+    font-size: 1.2rem;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Mobile styles for scroll down button */
+@media (max-width: 768px) {
+    .scroll-down-container {
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .scroll-down-btn {
+        font-size: 0.8rem;
+        padding: 8px 20px;
     }
 } 
