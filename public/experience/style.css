@@ -37,7 +37,9 @@
 
 /* Experience Page Section Styles */
 .experience {
-    padding: 4rem;
+    padding: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
     background-color: #1a1a1a; /* Dark gray background */
     min-height: 100vh;
     color: #fff;
@@ -46,14 +48,12 @@
 }
 
 .experience h2 {
-    font-size: 4.5rem;
+    font-size: 3rem;
     font-weight: 700;
-    margin-bottom: 2rem;
+    color: #ff6b00;
+    margin-bottom: 1.5rem;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
-    display: block;
-    opacity: 0;
-    animation: slideInRight 1s ease forwards;
+    position: relative;
 }
 
 .experience h2::after {
@@ -65,29 +65,21 @@
     margin-top: 20px;
     margin-bottom: 30px;
     opacity: 0;
-    animation: slideInRight 1s ease forwards 0.3s;
+    animation: slideInRight 1s ease forwards;
 }
 
 .experience h3 {
     font-size: 1.8rem;
     font-weight: 600;
+    color: #ffffff;
     margin-bottom: 1.5rem;
-    color: #ccc;
-    opacity: 0;
-    animation: fadeIn 1s ease forwards 0.5s;
 }
 
 .experience-description {
-    max-width: 800px;
-    margin-bottom: 4rem;
-    opacity: 0;
-    animation: fadeIn 1s ease forwards 0.7s;
-}
-
-.experience-description p {
-    line-height: 1.8;
-    font-size: 1.1rem;
     color: #ccc;
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
 }
 
 /* Timeline and Experience Items */
@@ -96,71 +88,89 @@
 }
 
 .timeline-item {
+    display: flex;
     margin-bottom: 3rem;
     position: relative;
-    padding-bottom: 2rem;
-    opacity: 0;
-    animation: slideInUp 0.8s ease forwards;
-    animation-delay: calc(0.3s * var(--item-index, 1));
 }
 
-.timeline-item:nth-child(1) { --item-index: 1; }
-.timeline-item:nth-child(2) { --item-index: 2; }
-.timeline-item:nth-child(3) { --item-index: 3; }
-
 .timeline-divider {
-    width: 100%;
-    height: 1px;
-    background-color: rgba(255, 255, 255, 0.1);
-    margin: 2rem 0;
+    width: 2px;
+    background-color: #ff6b00;
+    margin-right: 2rem;
+    position: relative;
+}
+
+.timeline-divider::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #ff6b00;
+    border-radius: 50%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .timeline-content {
+    flex: 1;
     display: flex;
-    align-items: flex-start;
-    gap: 2rem;
+    background-color: #222;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(255, 107, 0, 0.2);
+    background-color: #2a2a2a;
 }
 
 .company-logo {
-    flex: 0 0 80px;
+    width: 80px;
     height: 80px;
-    background-color: #ff6b00;
-    border-radius: 0;
+    background-color: #333;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 1rem;
+    border-radius: 10px;
+    margin-right: 1.5rem;
+    flex-shrink: 0;
 }
 
 .company-logo img {
-    width: 40px;
-    height: 40px;
-    object-fit: contain;
-    filter: brightness(0) invert(1);
+    width: 50px;
+    height: 50px;
+    filter: invert(1);
 }
 
 .experience-details {
-    min-width: 250px;
+    margin-right: 1.5rem;
 }
 
 .company-name {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #ff6b00;
     display: block;
-    font-size: 1rem;
-    color: #ccc;
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
 }
 
 .job-title {
-    font-size: 2rem;
-    font-weight: 300;
-    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+    font-weight: 600;
     color: #fff;
+    margin-bottom: 0.5rem;
 }
 
 .years {
+    font-size: 0.85rem;
+    color: #aaa;
     display: block;
-    font-size: 1rem;
-    color: #ccc;
+    margin-bottom: 1rem;
 }
 
 .timeline-item .experience-description {
@@ -176,40 +186,145 @@
     color: #ccc;
 }
 
+/* Training Grid Styling */
+.training-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.training-item {
+    background-color: #222;
+    padding: 1.5rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: flex-start;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.training-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(255, 107, 0, 0.2);
+    background-color: #2a2a2a;
+}
+
+.training-icon {
+    width: 60px;
+    height: 60px;
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+
+.training-icon i {
+    font-size: 1.5rem;
+    color: #ff6b00;
+}
+
+.training-details h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.training-details p {
+    font-size: 0.9rem;
+    color: #aaa;
+    line-height: 1.4;
+}
+
 /* Responsive styles for Experience page */
-@media (max-width: 1024px) {
-    .experience h2 {
-        font-size: 3.5rem;
-    }
-    
+@media (max-width: 992px) {
     .timeline-content {
-        flex-wrap: wrap;
+        flex-direction: column;
     }
     
-    .experience-details {
-        min-width: auto;
+    .company-logo {
+        margin-right: 0;
         margin-bottom: 1rem;
     }
     
-    .job-title {
-        font-size: 1.8rem;
+    .experience-details {
+        margin-right: 0;
+        margin-bottom: 1rem;
     }
 }
 
 @media (max-width: 768px) {
     .experience {
-        padding: 3rem 2rem;
-        padding-top: 2rem; /* Adjusted for mobile header */
+        padding: 1.5rem;
     }
     
     .experience h2 {
-        font-size: 3rem;
-        margin-top: 1rem; /* Added space after mobile header */
+        font-size: 2.5rem;
+    }
+    
+    .experience h3 {
+        font-size: 1.5rem;
+    }
+    
+    .timeline-divider {
+        margin-right: 1rem;
+    }
+    
+    .timeline-content {
+        padding: 1.2rem;
     }
     
     .company-logo {
-        flex: 0 0 60px;
+        width: 60px;
         height: 60px;
+    }
+    
+    .company-logo img {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .job-title {
+        font-size: 1.1rem;
+    }
+    
+    .training-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .experience {
+        padding: 1rem;
+    }
+    
+    .experience h2 {
+        font-size: 2rem;
+    }
+    
+    .experience h3 {
+        font-size: 1.3rem;
+    }
+    
+    .experience-description {
+        font-size: 1rem;
+    }
+    
+    .timeline-divider {
+        display: none;
+    }
+    
+    .timeline-content {
+        padding: 1rem;
+    }
+    
+    .company-logo {
+        width: 50px;
+        height: 50px;
     }
     
     .company-logo img {
@@ -217,32 +332,32 @@
         height: 30px;
     }
     
-    .timeline-content {
-        gap: 1rem;
-    }
-    
-    /* Ensure content doesn't overlap with mobile nav */
-    body.menu-open .experience {
-        position: relative;
-        z-index: 1;
-    }
-}
-
-@media (max-width: 480px) {
-    .experience h2 {
-        font-size: 2.5rem;
-    }
-    
-    .experience h2::after {
-        width: 70px;
-        margin-bottom: 20px;
-    }
-    
-    .experience h3 {
-        font-size: 1.5rem;
-    }
-    
     .job-title {
-        font-size: 1.5rem;
+        font-size: 1rem;
+    }
+    
+    .years {
+        font-size: 0.8rem;
+    }
+    
+    .training-item {
+        padding: 1rem;
+    }
+    
+    .training-icon {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .training-icon i {
+        font-size: 1.2rem;
+    }
+    
+    .training-details h4 {
+        font-size: 1rem;
+    }
+    
+    .training-details p {
+        font-size: 0.8rem;
     }
 } 
