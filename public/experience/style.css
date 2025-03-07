@@ -89,22 +89,22 @@
 
 .timeline-item {
     display: flex;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     position: relative;
 }
 
 .timeline-divider {
     width: 2px;
     background-color: #ff6b00;
-    margin-right: 2rem;
+    margin-right: 1.5rem;
     position: relative;
 }
 
 .timeline-divider::before {
     content: '';
     position: absolute;
-    width: 15px;
-    height: 15px;
+    width: 12px;
+    height: 12px;
     background-color: #ff6b00;
     border-radius: 50%;
     top: 0;
@@ -116,10 +116,11 @@
     flex: 1;
     display: flex;
     background-color: #222;
-    padding: 1.5rem;
+    padding: 1.2rem;
     border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
+    align-items: center;
 }
 
 .timeline-content:hover {
@@ -129,8 +130,8 @@
 }
 
 .company-logo {
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
     background-color: #333;
     display: flex;
     align-items: center;
@@ -141,8 +142,8 @@
 }
 
 .company-logo img {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     filter: brightness(0) invert(1); /* This makes SVGs white */
     color: white;
 }
@@ -158,7 +159,7 @@
     font-weight: 500;
     color: #ff6b00;
     display: block;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.3rem;
     letter-spacing: 1px;
 }
 
@@ -166,14 +167,14 @@
     font-size: 1.3rem;
     font-weight: 600;
     color: #fff;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.3rem;
 }
 
 .years {
     font-size: 0.85rem;
     color: #aaa;
     display: block;
-    margin-bottom: 1rem;
+    margin-bottom: 0.3rem;
 }
 
 .timeline-item .experience-description {
@@ -183,7 +184,7 @@
 
 .timeline-item .experience-description p {
     margin: 0;
-    line-height: 1.6;
+    line-height: 1.5;
 }
 
 /* Training Grid Styling */
@@ -196,13 +197,13 @@
 
 .training-item {
     background-color: #222;
-    padding: 1.5rem;
+    padding: 1.2rem;
     border-radius: 8px;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
-    min-height: 120px; /* Ensure consistent height */
+    min-height: 100px;
 }
 
 .training-item:hover {
@@ -212,8 +213,8 @@
 }
 
 .training-icon {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     background-color: #333;
     display: flex;
     align-items: center;
@@ -224,7 +225,7 @@
 }
 
 .training-icon i {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #ff6b00;
 }
 
@@ -277,17 +278,17 @@
     }
     
     .timeline-content {
-        padding: 1.2rem;
+        padding: 1rem;
     }
     
     .company-logo {
-        width: 60px;
-        height: 60px;
+        width: 55px;
+        height: 55px;
     }
     
     .company-logo img {
-        width: 35px;
-        height: 35px;
+        width: 30px;
+        height: 30px;
     }
     
     .job-title {
@@ -296,6 +297,16 @@
     
     .training-grid {
         grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .training-item {
+        min-height: 80px;
+        padding: 1rem;
+    }
+    
+    .timeline-item {
+        margin-bottom: 1.5rem;
     }
 }
 
@@ -321,17 +332,17 @@
     }
     
     .timeline-content {
-        padding: 1rem;
+        padding: 0.8rem;
     }
     
     .company-logo {
-        width: 50px;
-        height: 50px;
+        width: 45px;
+        height: 45px;
     }
     
     .company-logo img {
-        width: 30px;
-        height: 30px;
+        width: 25px;
+        height: 25px;
     }
     
     .job-title {
@@ -343,20 +354,21 @@
     }
     
     .training-item {
-        padding: 1rem;
+        padding: 0.8rem;
+        min-height: 70px;
     }
     
     .training-icon {
-        width: 45px;
-        height: 45px;
+        width: 40px;
+        height: 40px;
     }
     
     .training-icon i {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
     
     .training-details h4 {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
     
     .training-details p {
