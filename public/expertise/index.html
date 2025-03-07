@@ -263,6 +263,14 @@
                 </div>
             </div>
         </section>
+        
+        <!-- Scroll to Next Page Button -->
+        <div class="scroll-down-container">
+            <a href="#philanthropy" class="scroll-down-btn">
+                <span>Philanthropy Page</span>
+                <i class="fas fa-chevron-down bounce"></i>
+            </a>
+        </div>
     </main>
     
     <!-- jQuery -->
@@ -271,5 +279,24 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.js"></script>
     <!-- Main Navigation JS -->
     <script src="../assets/js/main.js"></script>
+    
+    <!-- Page navigation script -->
+    <script>
+        // Scroll down button animation
+        const scrollDownBtn = document.querySelector('.scroll-down-btn');
+        if (scrollDownBtn) {
+            scrollDownBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Redirect to philanthropy page with a smooth fade effect
+                document.body.style.opacity = '0';
+                document.body.style.transition = 'opacity 0.5s ease';
+                
+                setTimeout(() => {
+                    window.location.href = "/philanthropy";
+                }, 500);
+            });
+        }
+    </script>
 </body>
 </html> 

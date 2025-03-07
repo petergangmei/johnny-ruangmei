@@ -134,6 +134,14 @@
                     in both national and international arenas.</p>
             </div>
         </section>
+        
+        <!-- Scroll to Next Page Button -->
+        <div class="scroll-down-container">
+            <a href="#expertise" class="scroll-down-btn">
+                <span>Expertise Page</span>
+                <i class="fas fa-chevron-down bounce"></i>
+            </a>
+        </div>
     </main>
 
     <!-- jQuery -->
@@ -142,6 +150,25 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.js"></script>
     <!-- Custom JS -->
     <script src="../assets/js/main.js"></script>
+    
+    <!-- Page navigation script -->
+    <script>
+        // Scroll down button animation
+        const scrollDownBtn = document.querySelector('.scroll-down-btn');
+        if (scrollDownBtn) {
+            scrollDownBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Redirect to expertise page with a smooth fade effect
+                document.body.style.opacity = '0';
+                document.body.style.transition = 'opacity 0.5s ease';
+                
+                setTimeout(() => {
+                    window.location.href = "/expertise";
+                }, 500);
+            });
+        }
+    </script>
 </body>
 
 </html>

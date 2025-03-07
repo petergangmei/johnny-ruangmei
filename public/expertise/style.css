@@ -483,4 +483,69 @@
         width: 35px;
         height: 35px;
     }
+}
+
+/* Scroll down button styling */
+.scroll-down-container {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    z-index: 10;
+}
+
+.scroll-down-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #ff6b00;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(255, 107, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.scroll-down-btn:hover {
+    background-color: #ff8533;
+    box-shadow: 0 6px 15px rgba(255, 107, 0, 0.4);
+    transform: translateY(-3px);
+}
+
+.scroll-down-btn span {
+    margin-bottom: 0.5rem;
+}
+
+.scroll-down-btn .bounce {
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+@media (max-width: 768px) {
+    .scroll-down-container {
+        margin-top: 2rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .scroll-down-btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
 } 
