@@ -1222,4 +1222,145 @@ html {
     .hero {
         padding: 0.5rem;
     }
+}
+
+/* Experience Section Styles */
+.experience {
+    padding: 4rem 2rem;
+    background-color: #1a1a1a;
+    color: #ccc;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ccc;
+    margin-bottom: 3rem;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.experience-item {
+    position: relative;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    margin-bottom: 2rem;
+}
+
+.experience-item:hover {
+    transform: translateY(-5px);
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.experience-icon {
+    width: 60px;
+    height: 60px;
+    background-color: #ff6b00;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.experience-icon i {
+    font-size: 1.5rem;
+    color: #1a1a1a;
+}
+
+.company-name {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #ff6b00;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+.position {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.duration {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+/* Experience Section Responsive Styles */
+@media (max-width: 768px) {
+    .experience {
+        padding: 3rem 1rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .experience-item {
+        padding: 1.5rem;
+    }
+
+    .experience-icon {
+        width: 50px;
+        height: 50px;
+        margin: 0 auto 1rem;
+    }
+
+    .company-name {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .position {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+
+    .duration {
+        text-align: center;
+    }
+
+    .description {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .experience {
+        padding: 2rem 0.5rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .experience-item {
+        padding: 1rem;
+    }
+
+    .company-name {
+        font-size: 1.1rem;
+    }
+
+    .position {
+        font-size: 1rem;
+    }
+
+    .description {
+        font-size: 0.9rem;
+    }
 } 
