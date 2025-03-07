@@ -39,7 +39,7 @@
 
 .img-border{
     border-radius: 10px;
-    box-shadow: 0 0 5px 0 rgba(45, 45, 45, 0.5);
+    box-shadow: 0 0 15px 0 rgba(45, 45, 45, 0.5);
     border: 1px solid #2d0505;
 }
 
