@@ -1369,48 +1369,47 @@ html {
     }
 }
 
-/* Scroll Down Button Styles */
+/* Global Scroll Down Button Styling - Used across all pages */
 .scroll-down-container {
+    position: relative;
+    bottom: 0;
     width: 100%;
     display: flex;
     justify-content: center;
-    position: relative;
-    margin-top: 2rem;
+    margin-top: 3rem;
     margin-bottom: 2rem;
     z-index: 10;
 }
 
 .scroll-down-btn {
-    display: flex;
-    flex-direction: column;
+    display: inline-flex;
     align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #1a1a1a;
     color: #ff6b00;
+    padding: 1rem 2rem;
+    border-radius: 30px;
     text-decoration: none;
     font-weight: 600;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    font-size: 0.9rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
-    background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 30px;
-    padding: 10px 25px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    min-width: 220px;
+    text-transform: uppercase;
 }
 
 .scroll-down-btn:hover {
-    color: #fff;
-    background-color: #ff6b00;
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(255, 107, 0, 0.3);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    transform: translateY(-3px);
 }
 
 .scroll-down-btn span {
-    margin-bottom: 5px;
+    margin-bottom: 0.5rem;
 }
 
 .scroll-down-btn .bounce {
     animation: bounce 2s infinite;
-    font-size: 1.2rem;
+    color: #ff6b00;
 }
 
 @keyframes bounce {
@@ -1425,15 +1424,15 @@ html {
     }
 }
 
-/* Mobile styles for scroll down button */
 @media (max-width: 768px) {
     .scroll-down-container {
-        margin-top: 1.5rem;
+        margin-top: 2rem;
         margin-bottom: 1.5rem;
     }
     
     .scroll-down-btn {
-        font-size: 0.8rem;
-        padding: 8px 20px;
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+        min-width: 200px;
     }
 } 
