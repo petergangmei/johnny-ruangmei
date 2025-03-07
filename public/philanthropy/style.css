@@ -1,0 +1,289 @@
+/* 
+* Philanthropy Page Specific Styles
+* For Johnny Ruangmei Portfolio
+*/
+
+/* Animation Keyframes */
+@keyframes slideInRight {
+    0% {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInUp {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Philanthropy Section Styles */
+.philanthropy {
+    padding: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.philanthropy h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #ff6b00;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.philanthropy h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    margin-top: 2.5rem;
+}
+
+.philanthropy-description {
+    color: #ccc;
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.philanthropy-section {
+    position: relative;
+    padding-left: 3.5rem;
+    margin-bottom: 3rem;
+    background-color: #222;
+    padding: 2rem 2rem 2rem 3.5rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.philanthropy-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(255, 107, 0, 0.2);
+    background-color: #2a2a2a;
+}
+
+.philanthropy-section::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background-color: #ff6b00;
+    border-radius: 2px;
+}
+
+.philanthropy-section h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #ff6b00;
+    margin-bottom: 1rem;
+}
+
+.philanthropy-section h4::before {
+    font-family: "Font Awesome 5 Free";
+    margin-right: 0.5rem;
+    color: #ff6b00;
+    font-weight: 900;
+}
+
+/* Education icon */
+.philanthropy-section:nth-of-type(1) h4::before {
+    content: "\f549"; /* graduation cap */
+}
+
+/* Healthcare icon */
+.philanthropy-section:nth-of-type(2) h4::before {
+    content: "\f0f8"; /* hospital symbol */
+}
+
+/* Sustainable Development icon */
+.philanthropy-section:nth-of-type(3) h4::before {
+    content: "\f06c"; /* leaf */
+}
+
+.philanthropy-section p {
+    color: #ccc;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.join-section {
+    text-align: center;
+    padding: 3rem 2rem;
+    background-color: #222;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    margin-top: 3rem;
+    border: 1px solid rgba(255, 107, 0, 0.2);
+    background: linear-gradient(135deg, #222222 0%, #2a2a2a 100%);
+}
+
+.join-section h3 {
+    margin-top: 0;
+}
+
+.join-section h3::before {
+    content: "\f0c0"; /* users icon */
+    font-family: "Font Awesome 5 Free";
+    margin-right: 0.5rem;
+    color: #ff6b00;
+    font-weight: 900;
+}
+
+.join-section p {
+    color: #ccc;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin: 0 auto 2rem;
+    max-width: 700px;
+}
+
+/* Global Peace Recognition Section */
+.recognition-section {
+    margin-top: 3rem;
+    background: linear-gradient(135deg, #222222 0%, #2d2d2d 100%);
+}
+
+.recognition-section h4::before {
+    content: "\f024"; /* flag icon */
+    font-family: "Font Awesome 5 Free";
+    margin-right: 0.5rem;
+    color: #ff6b00;
+    font-weight: 900;
+}
+
+.citation {
+    margin-top: 1.5rem;
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #aaa;
+    border-top: 1px solid rgba(255, 107, 0, 0.2);
+    padding-top: 1rem;
+}
+
+.citation a {
+    color: #ff6b00;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.citation a:hover {
+    color: #ff8c3f;
+    text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .philanthropy {
+        padding: 1.5rem;
+    }
+    
+    .philanthropy h2 {
+        font-size: 2.5rem;
+    }
+    
+    .philanthropy h3 {
+        font-size: 1.5rem;
+        margin-top: 2rem;
+    }
+    
+    .philanthropy-section {
+        padding: 1.5rem;
+    }
+    
+    .philanthropy-section h4 {
+        font-size: 1.3rem;
+    }
+    
+    .philanthropy-section p {
+        font-size: 1rem;
+    }
+    
+    .join-section {
+        padding: 2rem 1.5rem;
+    }
+    
+    .join-section p {
+        font-size: 1.1rem;
+    }
+    
+    .citation {
+        margin-top: 1.2rem;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .philanthropy {
+        padding: 1rem;
+    }
+    
+    .philanthropy h2 {
+        font-size: 2rem;
+    }
+    
+    .philanthropy h3 {
+        font-size: 1.3rem;
+        margin-top: 1.5rem;
+    }
+    
+    .philanthropy-description {
+        font-size: 1rem;
+    }
+    
+    .philanthropy-section {
+        padding: 1.2rem 1.2rem 1.2rem 2rem;
+    }
+    
+    .philanthropy-section::before {
+        width: 3px;
+    }
+    
+    .philanthropy-section h4 {
+        font-size: 1.2rem;
+    }
+    
+    .philanthropy-section h4::before {
+        margin-right: 0.3rem;
+    }
+    
+    .philanthropy-section p {
+        font-size: 0.95rem;
+    }
+    
+    .join-section {
+        padding: 1.5rem 1rem;
+    }
+    
+    .join-section p {
+        font-size: 1rem;
+    }
+    
+    .citation {
+        margin-top: 1rem;
+        font-size: 0.8rem;
+    }
+} 
