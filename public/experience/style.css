@@ -143,11 +143,14 @@
 .company-logo img {
     width: 50px;
     height: 50px;
-    filter: invert(1);
+    filter: brightness(0) invert(1); /* This makes SVGs white */
+    color: white;
 }
 
 .experience-details {
     margin-right: 1.5rem;
+    width: 250px; /* Fixed width for consistent alignment */
+    flex-shrink: 0;
 }
 
 .company-name {
@@ -174,16 +177,13 @@
 }
 
 .timeline-item .experience-description {
-    max-width: 500px;
-    margin-bottom: 0;
-    flex: 1;
+    flex: 1; /* Takes remaining space */
+    color: #ccc;
 }
 
 .timeline-item .experience-description p {
     margin: 0;
-    font-size: 1rem;
     line-height: 1.6;
-    color: #ccc;
 }
 
 /* Training Grid Styling */
@@ -202,6 +202,7 @@
     align-items: flex-start;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
+    min-height: 120px; /* Ensure consistent height */
 }
 
 .training-item:hover {
@@ -254,6 +255,7 @@
     .experience-details {
         margin-right: 0;
         margin-bottom: 1rem;
+        width: 100%; /* Full width on smaller screens */
     }
 }
 
