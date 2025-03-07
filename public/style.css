@@ -257,7 +257,10 @@ body {
     /* Show mobile toggle on mobile */
     .mobile-menu-toggle {
         display: flex;
+        position: absolute;
         right: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
     }
     
     /* Navigation container for slide-in menu */
@@ -268,11 +271,13 @@ body {
         width: 100%;
         height: calc(100vh - 60px);
         background-color: rgba(0, 0, 0, 0.95);
-        padding-top: 2rem;
-        z-index: 999;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 1rem 0;
         transition: left 0.3s ease;
         overflow-y: auto;
-        display: block;
+        z-index: 999;
     }
     
     /* Show navigation when menu is open */
@@ -282,37 +287,53 @@ body {
     
     /* Navigation links for mobile */
     .nav-links {
+        padding: 2rem 0;
         text-align: center;
-        padding: 2rem 1rem;
     }
     
     .nav-links li {
-        margin: 1.5rem 0;
+        margin-bottom: 1.5rem;
     }
     
     .nav-links a {
         font-size: 1.2rem;
-        color: #fff;
         padding: 0.5rem 1rem;
         display: inline-block;
+        transition: all 0.3s ease;
     }
     
-    /* Copyright positioning */
+    .nav-links a:hover,
+    .nav-links a.active {
+        color: #ff6b00;
+    }
+    
     .copyright {
         text-align: center;
         padding: 1rem;
-        position: absolute;
-        bottom: 2rem;
-        width: 100%;
-        color: #fff;
+        font-size: 0.75rem;
+    }
+    
+    /* Social icons for mobile */
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 0.5rem;
+    }
+    
+    .social-icons a {
+        color: #999;
+        font-size: 1.2rem;
+        margin: 0 0.8rem;
+        padding: 0.5rem;
     }
     
     /* Main content adjustments */
     .main-content {
         margin-left: 0;
         width: 100%;
-        padding-top: 60px;
+        padding-top: 60px; /* Match sidebar height */
         margin-top: 0;
+        background-color: #1a1a1a;
     }
     
     /* Hero section mobile adjustments */
@@ -451,11 +472,42 @@ body {
     font-weight: 700;
 }
 
+/* Social Media Icons Styling */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    padding: 0 1.8rem;
+}
+
+.social-icons a {
+    color: #999;
+    font-size: 1.2rem;
+    margin: 0 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #ff6b00;
+}
+
 .copyright {
     font-size: 0.8rem;
     opacity: 0.7;
     line-height: 1.4;
     padding: 0 1.8rem;
+}
+
+/* Mobile adjustments for social icons */
+@media (max-width: 768px) {
+    .social-icons {
+        margin-bottom: 0.5rem;
+    }
+    
+    .social-icons a {
+        font-size: 1.1rem;
+        margin: 0 0.4rem;
+    }
 }
 
 /* Main Content Styles */
