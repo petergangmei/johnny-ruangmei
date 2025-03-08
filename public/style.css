@@ -1196,7 +1196,6 @@ html {
         flex-direction: column-reverse;
         align-items: center;
         justify-content: center;
-        padding: 2rem 1rem;
         height: auto !important; /* Override the h-100 class */
         min-height: 80vh;
     }
